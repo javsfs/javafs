@@ -11,18 +11,46 @@
 
     <!-- 
     요소
-    1. 블록레벨요소 hi~h6 , p , hr , ul , ol , li , dl , dt , dd , blockquote , address
-    2. 인라인레벨요소 : b , strong, i , em , mark, small , sup , sub , ins , del , img , 
+    1. 블록레벨요소     :   1. 위에서 아래로 배치(세로배치)
+                            2. 와이어 프레임 설계는 블록레벨요소로 한다.
+                            3. 블록레벨요소는 블록레벨요소와 인라인요소를 자식으로
+                               가질수 있다.
+                            4. div , hi~h6 , p , hr , ul , ol , li , dl , dt , dd ,
+                            blockquote , address , header , nav , main , section ,
+                            article , aside , footer , from , fieldset , table ,
+                            thead , tbody , tfoot , .............
+                        
+    
+    2. 인라인레벨요소   :  1. 왼쪽에서 오른쪽으로 배치(가로배치)
+                           2. 인라인요소는 블록레벨요소를 자식으로 가질 수 없다.
+                              (단, a태그는 예외)
+                           3. b , strong, i , em , mark, small , sup , sub , ins , del ,
+                           a , br , q , abbr , cite , img , input , label , select , 
+                           textarea , botton , .............
+                        
      -->
 
     <h2>블록 레벨 요소</h2>
-    <div>div1</div>
-    <div>div2</div>
-    <div>div3</div>
+    <div>
+        <div>div</div>
+        <header  eader>header</header>
+        <nav>nav</nav>
+        <main>main</main>
+        <section>
+            <p>scetion과 article은 하나이상의 제목이(h2~h6) 있어야함.</p>
+        </section>
+        <footer>footer</footer>
+    </div>
+
 
     <h2>인라인 요소</h2>
-    <span>span1</span>
-    <span>span2</span>
-    <span>span3</span>
+    <div>
+        <span>span</span>
+        <a href="#">a</a>
+        <b>b</b>
+        <i>i</i>
+        <input type="text" id="aaa">
+        <label for="aaa">라벨</label>
+    </div>
 </body>
 </html>

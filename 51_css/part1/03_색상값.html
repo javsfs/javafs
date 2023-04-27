@@ -8,16 +8,65 @@
     <style>
         /* 140개 영문 키워드: https://www.w3schools.com/colors/colors_names.asp */
 
+            /* 
+                2진수   :   0 ,1
+                8진수   :   0~7
+                16진수  :   0~9 , a~f (대소문자 구별 없음)
+                10진수  :   0~9
+            */
+
         /* HEX: 16진수 -> 0~9, A~F */
         /* #RRGGBB 또는 #RGB */
+        /* 
+        #ff0000 , #f00
+        #0000ff , #00f
+        #00ff00 , #0f0
+        #000000 , #000 
+        #ffffff , #fff 
+        #ffff00 , #ff0
+        #00ffff , #0ff
+        #ff00ff , #f0f
+        #123456
+        #223344 , #234
+        #223345
+        */
 
         /* rgb(0~255, 0~255, 0~255) */  
+        /* 
+        rgb(r,g,b)
+        rgb(0,0,0)
+        rgb(255,255,255)
+        rgb(255,0,0)
+        rgb(255,255,0)
+        */
 
         /* rgba(0~255, 0~255, 0~255, 0~1) */
+        /* 
+        rgba(r,g,b,alpha)  alpha : 투명도 ( 0 ~ 1 )
+        rgba(255,0,0,0.5)
+        rgba(255,0,0)
+        */
 
         /* hsl(0~359, 0~100%, 0~100%) */
+        /* 
+        hsl(hue, saturation, lightness)
+        hsl(0,100%,50%)
+
+        */
         
         /* hsla(0~359, 0~100%, 0~100%, 0~1) */
+        /* 
+        hsl(hue, saturation, lightness, alpha)
+        hsla(0,100%,50%,0.5)
+        */
+
+        /* 카멜(낙타)케이스 */
+       .colorName{color: red;}
+       .colorHex{color: #ff0000;}
+       .colorRgb{color: rgb(255, 0, 0);}
+       .colorRgba{color: rgba(255, 0, 0, 1);}
+       .colorHsl{color: hsl(0, 100%, 50%);}
+       .colorHsla{color: hsla(0, 100%, 50%, 1);}
 
     </style>
 </head>

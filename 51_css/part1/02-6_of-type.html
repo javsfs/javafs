@@ -24,22 +24,33 @@
             홀수: 2n-1 또는 odd
         */
 
+           p:first-of-type{color: red;}
+           p:nth-of-type(5){color: blue;}
+        p:nth-of-type(2n){color: orange;}
+        p:last-of-type{color:brown;}
+
+
+        div p:nth-of-type(2){background-color: yellow;}
+
     </style>
 </head>
 <body>
-    <h1>의사 클래스 선택자</h1>
-    <h2>~of-type</h2>
-    <p>1 번째 요소입니다.</p>
-    <p>2 번째 요소입니다.</p>
-    <p>3 번째 요소입니다.</p>
-    <p>4 번째 요소입니다.</p>
-    <p>5 번째 요소입니다.</p>
-    <p>6 번째 요소입니다.</p>
-    <p>7 번째 요소입니다.</p>
-    <p>8 번째 요소입니다.</p>
-    <p>9 번째 요소입니다.</p>
-    <p>10 번째 요소입니다.</p>
-    <p>11 번째 요소입니다.</p>
-    <p>12 번째 요소입니다.</p>
+   
+    <h1>의사 클래스 선택자 요소</h1>
+    <div>
+        <h2>~of-type  1요소</h2>
+            <p>1요소입니다.</p>
+            <p>2요소입니다.</p>
+            <p>3요소입니다.</p>
+            <p>4요소입니다.</p>
+    </div>
+
+    <div>
+        <h2>~of-type  요소</h2>
+            <p>요소입니다.</p>
+            <p>요소입니다.</p>
+            <p>요소입니다.</p>
+            <p>요소입니다.</p>
+    </div>
 </body>
 </html>

@@ -7,15 +7,27 @@
     <title>HTML+CSS</title>
     <style>
         /* 
-            의사(Pseudo, 가상, 유사) 클래스
+            의사(Pseudo, 가상, 유사) 클래스  -> (:)
 
             a:link - 방문전: 파란색
             a:visited - 방문후: 보라색
             선택자:hover - 올린경우: 파란색
             선택자:active - 눌린경우: 빨간색
 
-            :link -> :visited -> :hover -> :active 순으로 기록해야한다.
+                   :link -> :visited -> :hover -> :active 순으로 기록해야한다.
         */
+
+        /* a:link{color: red;}
+        a:visited{color: orange;}
+        a:hover{color: yellow;}
+        a:active{color: green;} */
+
+        a{color: #999;text-decoration: none;}
+        a:hover{color:#111;text-decoration: underline;}
+
+        .red:hover{color: red;}
+        .org:hover{color:orange;}
+        .blu:hover{color: blue;}
 
     </style>
 </head>
@@ -23,5 +35,12 @@
     <h1>의사 클래스 선택자</h1>
     <a href="#">링크1</a>
     <a href="#">링크2</a>
+    <a href="https://naver.com"><img src="/51_css/assets/naver.png" alt="네이버"></a>
+    <a href="#"><img src="/51_css/assets/google.png" alt="구글"></a>
+
+    <!-- ctrl+alt+shift+위/아래방향키: 다중 커서 -->
+    <p class="red">마우스 올려봐!~나는 빨강색이다.</p>
+    <p class="org">마우스 올려봐!~나는 주황색이다.</p>
+    <p class="blu">마우스 올려봐!~나는 파랑색이다.</p>
 </body>
 </html>

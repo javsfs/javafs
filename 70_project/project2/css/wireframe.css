@@ -1,144 +1,181 @@
 @charset "utf-8";
 
-/* * {
+/* reset */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-} */
-
-/* body {
-    width: 1920px;
-} */
-
-#wrap {
-    border: 1px solid darkred;
-    width: 1920px;
-    margin: 0 auto;
-    overflow: hidden;
-    /* 가운데 맞춤 */
 }
 
-/* 헤더 */
+body {
+    color: #000;
+    background: #fff;
+}
+
+a {
+    color: #000;
+}
+
+/* 목록에 마커 제거 */
+li {
+    list-style: none;
+}
+
+/* header */
 header {
-    border: 10px solid blanchedalmond;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    padding: 0 32px;
+    height: 54px;
+    background: #777;
 }
 
-
-.h11,
-h2 {
-    border: 1px solid blue;
+.logo {
+    float: left;
 }
 
-.nav {
-    border: 1px solid darkturquoise;
+nav {
     float: right;
 }
 
-/* 섹션1 */
-#section1 {
-    float: left;
-    width: 1500px;
-    height: 750px;
-    margin: 0 auto;
-    border: 1px solid blueviolet;
-}
-
-#section1 div {
-    float: left;
-    width: 1500px;
-    height: 600px;
-    border: 1px solid lawngreen;
-}
-
-/* 섹션2 */
-#section2 {
-    float: left;
-    width: 1500px;
-    height: 600px;
-    border: 1px solid chartreuse;
-    margin: 0 auto;
-    padding: 0;
-}
-
-.li li:not(:nth-of-type(4n)) {
-    margin-right: 20px;
-}
-
-.li li:not(:nth-of-type(4)~li) {
-    margin-bottom: 20px;
-}
-
-ul{
-    margin: 0;
-    padding: 0;
-}
-
-.li{
-    border: 1px solid goldenrod;
-    width: 360px;
-    height: 240px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
+nav li {
     display: inline-block;
 }
 
 
-#section3 {
-    float: left;
-    width: 1500px;
-    height: 700px;
+/* section common */
+section {
+    width: 1496px;
     margin: 0 auto;
-    border: 1px solid darkolivegreen;
 }
 
-.ppp {
-    border: 1px solid lightcoral;
-    margin: 30px 0;
+.section {
+    padding-top: 81px;
 }
 
-.li1 li {
-    width: 360px;
-    height: 460px;
-    border: 1px solid red;
-    margin-top: 20px;
+.section h2 {
+    margin-bottom: 16px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 16px;
+}
+
+.section h2+p {
+    margin-bottom: 32px;
+}
+
+/* section1 */
+#main_img {
+    position: relative;
+}
+
+#main_img h2 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 8px 24px;
+}
+
+/* //section1 */
+
+/* section2, 3 common*/
+#menu li,
+#event li {
+    float: left;
+    width: 362px;
+}
+
+/* #menu ul{
+    overflow: hidden;
+} */
+#menu ul::after,
+#event ul::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+#menu li:not(:nth-of-type(4n)),
+#event li:not(:nth-of-type(4n)) {
+    margin-right: 16px;
+}
+
+/* //section2, 3 */
+.po1 {
+    border: 1px solid black;
+    color: black;
+}
+
+/* section2 */
+#menu h2 {
+    margin-bottom: 48px;
+}
+
+#menu h3 {
     display: inline-block;
 }
 
-
-/* 섹션4 */
-#section4 {
-    float: left;
-    width: 1500px;
-    height: 700px;
-    border: 1px solid fuchsia;
-    margin: 0 auto;
+.po1 {
+    position: absolute;
+    height: 32px;
+    padding: 8px 16px;
+    margin: 0, auto;
 }
 
-.form {
-    width: 1500px;
-    height: 300px;
-    border: 1px solid lightseagreen;
-    margin: 0 auto;
+#menu {
+    position: relative;
 }
 
-.map {
-    width: 1500px;
-    height: 200px;
-    border: 1px solid limegreen;
-    margin-top: 40px;
+/* //section2 */
+
+/* section3 */
+#event li h3 {
+    margin: 16px 0 8px;
 }
 
-/* 푸터 */
+#event li p {
+    margin: 8px 0;
+}
+
+#event li a {
+    display: block;
+    background: #ccc;
+    text-align: center;
+    padding: 8px 0;
+    margin-top: 16px;
+}
+
+/* //section3 */
+/* section4 */
+
+/*// section4 */
+input {
+    display: block;
+}
+
+form {
+    height: 216px;
+}
+
+form>input {
+    margin-bottom: 8px;
+    padding: 8px 8px;
+    width: 1500px;
+}
+
+button {
+    padding: 8px;
+}
+
+/* footer */
 footer {
-    float: left;
-    border: 1px solid gold;
-    width: 1500px;
-    height: 200px;
-    margin: 0 auto;
+    height: 81px;
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 32px 0;
 }
 
-.p123{
-    border: 1px solid lightslategrey;
-    margin: 0 auto;
-}
+/* //footer */

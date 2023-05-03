@@ -7,11 +7,12 @@
     box-sizing: border-box;
 }
 
-.clearfix::after {
+/* float 사용했을때 */
+/* .clearfix::after {
     content: '';
     clear: both;
     display: block;
-}
+} */
 
 /* header::after,
 .contents::after,
@@ -28,12 +29,19 @@ footer::after {
     /* 가운데 맞춤 */
 }
 
-.logo,
+/* flex를 사용했을때 */
+header, #contents, footer{
+    display: flex;
+}
+
+
+/* 밑에는 float 사용했을때 */
+/* .logo,
 nav,
 #contents div,
 footer div {
     float: left;
-}
+} */
 
 /* 헤더 */
 header {

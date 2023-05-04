@@ -11,11 +11,28 @@
             font-style: italic;
             font-weight: bold;
             font-size: 16px;
-            line-height: 1.6;
+            line-height: 1.6; /* 줄간격 1.6= 글자크기의 1.6배 */
             font-family: 'Courier New', Courier, monospace;
         }
 
-        /* font: [스타일] [굵기] 크기[/줄간격] 글꼴; */
+        /* 
+            font-style: 기울임;
+            font-weight: 굵기;
+            font-size: 크기;
+            font-family: 글꼴;
+            line-height: 줄간격;
+        font: [스타일] [굵기] 크기[/줄간격] 글꼴;   (속기형)
+        font: [굵기] [스타일] 크기[/줄간격] 글꼴;   (속기형)
+         (속기형)글꼴의 크기와 종류는 반드시 지정해야한다
+         스타일과 굵기는 순서를 바꿔도 되는데 크기와 글꼴은 순서를 바꾸면 안된다.
+         줄간격은 글자크기뒤에 /쓰고 써야된다.
+         */
+
+         .font2{
+            font: italic bold 16px/1.6 'Courier New', Courier, monospace;
+            /* font: 16px 'Courier New', Courier, monospace; */
+         }
+         
 
         
     </style>

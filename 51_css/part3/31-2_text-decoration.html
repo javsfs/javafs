@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,19 +8,58 @@
     <title>HTML+CSS</title>
     <style>
         /* .tdn에 텍스트 장식을 제거해 보세요. */
-        .tdn{text-decoration: none;}
-    
+        .tdn {
+            text-decoration-line: none;
+            text-decoration-style: solid;
+            text-decoration-color: black;
+            text-decoration-thickness: auto;/* vercss4 */
+
+            text-decoration: none;
+        }
+
         /* .tdu에 텍스트 밑줄을 지정해 보세요. */
-        .tdu{text-decoration: underline;}
+        .tdu {
+            text-decoration: underline;
+            text-decoration-style: dashed;
+            text-decoration-color: aqua;
+            text-decoration-thickness: 5px;
+        }
 
         /* .tdo에 텍스트 윗줄을 지정해 보세요. */
-        .tdo{text-decoration: overline;}
+        .tdo {
+            text-decoration: overline;
+            text-decoration-style: dotted;
+        }
 
         /* .tdl에 텍스트 취소선을 지정해 보세요. */
-        .tdl{text-decoration: line-through;}
-        
+        .tdl {
+            text-decoration: line-through;
+            text-decoration-style: wavy;
+        }
+
+        a {
+            color: #ff4747;
+        }
+
+        a:hover {
+            color: #333;
+            text-decoration: underline;
+        }
+
+        /* 
+            text-decoration-thickness: 값;
+                값: none, underline, overline, line-through
+            text-decoration-line: 두께;
+                값: auto, px(em, rem), %
+            text-decoration-style: 스타일;
+                값: solid, dotted, dashe, double, 
+            text-decoration-color: 현재색;
+
+            text-decoration: line thickness style color;(속기형) line은 필수로 써야됨
+        */
     </style>
 </head>
+
 <body>
     <h1>텍스트 장식(꾸밈)</h1>
     <p class="tdn">text-decoration: none;</p>
@@ -31,4 +71,5 @@
     <p class="tdl">text-decoration: underline;</p>
     <a href="#" class="tdl">text-decoration: line-through;</a>
 </body>
+
 </html>

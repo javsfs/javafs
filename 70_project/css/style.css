@@ -20,9 +20,14 @@ body {
 /* a태그 글자 색은 bdoy 글자 색을 상속 받지 않는다. */
 a {
     color: #333;
+    text-decoration: none;
 }
 img{
     width: 100%;
+    vertical-align: top;
+}
+li{
+    list-style: none;
 }
 
 /* 헤더 */
@@ -33,23 +38,30 @@ header{
 }
 header ul{
     height: 54px;
-    padding: 0 32px;
+    padding: 0 16px;
     display: flex;
     align-items: center;
 }
-header li{
-    margin: 0 8px;
-    /* list-style: none; */
-}
+
 header a{
     padding: 4px 16px;
 }
 header a:hover{
     background: #ccc;
 }
+header i{
+    margin-right: 8px;
+}
 /* 섹션1 */
 #home{
     position: relative;
+    /* background: url(../images/a1.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-attachment: fixed; */
+    height: 930px;    
+    background: url(../images/a1.png) no-repeat 50% 50%/cover fixed;
 }
 .logo{
     position: absolute;

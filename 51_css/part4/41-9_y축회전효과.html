@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,61 +7,59 @@
     <title>HTML+CSS</title>
     <style>
         .container {
-            perspective: 800px;
             width: 110px;
             height: 110px;
+            perspective: 800px;
         }
-
-
         .inner {
             position: relative;
+            width: 100%;
             height: 100%;
-            transition: .5s;
-            transform-style: preserve-3d;
+            transition: 1s;
+            transform-style:preserve-3d;
         }
-
         .inner div {
             position: absolute;
             width: 100%;
             height: 100%;
-            border-radius: 50%;
+            border-radius: 50%;            
         }
 
         .front {
             z-index: 1;
-            background: lawngreen;
+            background: lightcoral;
             backface-visibility: hidden;
         }
-
+      
         .back {
-            background: lightcoral;
-            transform: rotatey(180deg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgb(4, 125, 253);
+            transform: rotateY(180deg);
             text-align: center;
-            line-height: 110px;
-            font-size: 2rem;
+            font-size: 1.2rem;
             color: #fff;
             font-weight: bold;
         }
-
+        
         .container:hover .inner {
-            transform: rotatey(180deg);
+            transform: rotateY(180deg);
         }
     </style>
 </head>
-
 <body>
     <h1>이미지 호버시 y축 회전하기</h1>
     <p>https://www.farmhannong.com/kor/main/index.do</p>
     <div class="container">
         <div class="inner">
             <div class="front">
-                <img src="../assets/icon_farming_02.png" alt="사과">
+                <img src="../assets/icon_farming_02.png" alt="사과"> 
             </div>
             <div class="back">
-                사과
+                <span>배고픈<br>사과</span>
             </div>
         </div>
     </div>
 </body>
-
 </html>

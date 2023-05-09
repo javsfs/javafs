@@ -1,0 +1,35 @@
+@charset "utf-8";
+
+/* 공용 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 1920px;
+}
+section{
+    width: 1496px;
+    margin: 0 auto;
+}
+li{
+    list-style: none;
+}
+
+/* 헤더 */
+
+/* 섹션1 */
+
+/* 섹션2 */
+
+/* 섹션3 */
+
+/* 섹션4 */
+.map iframe {
+    width: 1496px;
+    height: 848px;
+}
+
+/* 푸터 */

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        .container{
+            perspective: 800px;
+        }
+        .container div {
+            width: 110px;
+            height: 110px;
+        }
+
+        .front {
+            z-index: 1;
+            background: lawngreen;
+            transform: rotatey(180deg);
+        }
+
+        .back {
+            background: lightcoral;
+        }
+        .inner{
+            position: relative;
+            transition: .5s;
+        }
+        .inner div{
+            position: absolute;
+            backface-visibility: hidden;   /
+        }
+        .container:hover .inner {
+            transform: rotatey(180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>이미지 호버시 y축 회전하기</h1>
+    <p>https://www.farmhannong.com/kor/main/index.do</p>
+    <div class="container">
+        <div class="inner">
+            <div class="front">
+                <img src="../assets/icon_farming_02.png" alt="사과">
+            </div>
+            <div class="back">
+                사과
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

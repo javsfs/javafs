@@ -7,9 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS</title>
     <style>
-        .container{
+        .container {
             perspective: 800px;
         }
+
         .container div {
             width: 110px;
             height: 110px;
@@ -19,19 +20,23 @@
             z-index: 1;
             background: lawngreen;
             transform: rotatey(180deg);
+            backface-visibility: hidden;
         }
 
         .back {
             background: lightcoral;
+            transform: rotatey(180deg);
         }
-        .inner{
+
+        .inner {
             position: relative;
             transition: .5s;
         }
-        .inner div{
+
+        .inner div {
             position: absolute;
-            backface-visibility: hidden;   /
         }
+
         .container:hover .inner {
             transform: rotatey(180deg);
         }

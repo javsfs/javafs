@@ -1,18 +1,23 @@
 @charset "utf-8";
-html{
+html {
     font-size: 10px;
 }
-body{
-    color: #000;
+body {
     font-size: 1.5rem;
-    list-style: 1.8;
+    line-height: 1.8;
+    color: #333;
 }
-h1{
-    font-size: 3.2rem;
+
+h1 {
+    font-size: 3rem;
 }
-h2{
+h2 {
     font-size: 2.4rem;
 }
-h3{
+h3 {
     font-size: 1.8rem;
+}
+a {
+    color: #333;
+    text-decoration: none;
 }

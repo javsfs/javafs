@@ -1,5 +1,27 @@
 @charset "utf-8";
 
+html {
+    font-size: 10px;
+}
+
+body {
+    color: #000;
+    font-size: 1.5rem;
+    list-style: 1.8;
+}
+
+h1 {
+    font-size: 3.2rem;
+}
+
+h2 {
+    font-size: 2.4rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
 /* 공용 */
 * {
     margin: 0;
@@ -7,29 +29,112 @@
     box-sizing: border-box;
 }
 
-body {
-    width: 1920px;
+html {
+    scroll-behavior: smooth;
 }
-section{
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+section {
     width: 1496px;
     margin: 0 auto;
+    padding-top: 81px;
 }
-li{
+
+section h2 {
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px sol
+}
+/* 목록의 마커 제거 */
+li {
     list-style: none;
 }
 
+img {
+    width: 100%;
+    vertical-align: top;
+}
+
 /* 헤더 */
+header {
+    position: fixed;
+    width: 1920px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+    top: 0;
+    z-index: 9999;
+}
 
 /* 섹션1 */
+#main {
+    padding-top: 81px;
+    position: relative;
+}
+
+#main h2 {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    padding: 8px 8px;
+    background: rgba(255, 150, 150, 0.445);
+    color: aliceblue;
+}
 
 /* 섹션2 */
 
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.po {
+    position: relative;
+}
+
+.flex .po {
+    position: absolute;
+    padding: 8px 16px;
+    background: rgb(255, 59, 65);
+    color: rgb(255, 171, 14);
+    margin: 0, auto;
+}
+
+.flex li:not(:nth-of-type(4n)) {
+    margin-right: 16px;
+}
+
+
 /* 섹션3 */
 
+
 /* 섹션4 */
-.map iframe {
-    width: 1496px;
-    height: 848px;
+input {
+    display: block;
+}
+
+form {
+    height: 216px;
+}
+
+form>input {
+    margin-bottom: 8px;
+    padding: 8px 8px;
+    width: 1500px;
+}
+
+button {
+    padding: 8px;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
 }
 
 /* 푸터 */

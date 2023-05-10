@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        /* 초기값 */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+        }
+
+        .scene {
+            width: 400px;
+            height: 200px;
+            margin: 100px;
+            perspective: 1000px;
+            perspective-origin: 50% -50%;
+        }
+
+        .cube {
+            position: relative;
+            transform-style: preserve-3d;
+            width: 200px;
+            height: 200px;
+        }
+
+        .cube_face {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 200px;
+            height: 200px;
+            font-size: 3rem;
+            color: #fff;
+            font-weight: bold;
+            text-align: center;
+            line-height: 200px;
+        }
+
+        .cube_face_front {
+            background: rgba(255, 50, 50, .7);
+            transform: rotatey(0deg) translateZ(100px);
+        }
+
+        .cube_face_back {
+            background: rgba(102, 255, 168, 0.7);
+            transform: rotatey(180deg) translateZ(100px);
+        }
+
+        .cube_face_left {
+            background: rgba(123, 176, 255, 0.7);
+            transform: rotatey(90deg) translateZ(100px);
+        }
+
+        .cube_face_right {
+            background: rgba(240, 70, +0, .7);
+            transform: rotatey(270deg) translateZ(100px);
+        }
+
+        .cube_face_top {
+            background: rgba(180, 0, 150, .7);
+            transform: rotatex(90deg) translateZ(100px);
+        }
+
+        .cube_face_bottom {
+            background: rgba(255, 106, 106, 0.7);
+            transform: rotatex(-90deg) translateZ(100px);
+        }
+
+        .cube {
+            animation: rotatey 30s infinite linear;
+        }
+
+        @keyframes rotatey {
+            0% {
+                transform: rotatey(0deg);
+            }
+
+            100% {
+                transform: rotatey(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>3D cube</h1>
+    <div class="scene">
+        <div class="cube">
+            <div class="cube_face cube_face_front">front</div>
+            <div class="cube_face cube_face_back">back</div>
+            <div class="cube_face cube_face_left">left</div>
+            <div class="cube_face cube_face_right">right</div>
+            <div class="cube_face cube_face_top">top</div>
+            <div class="cube_face cube_face_bottom">bottom</div>
+        </div>
+    </div>
+</body>
+
+</html>

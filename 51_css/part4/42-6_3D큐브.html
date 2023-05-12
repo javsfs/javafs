@@ -17,7 +17,7 @@
         }
 
         .scene {
-            width: 400px;
+            /* width: 400px; */
             height: 200px;
             margin: 100px;
             perspective: 1000px;
@@ -27,8 +27,10 @@
         .cube {
             position: relative;
             transform-style: preserve-3d;
+            top: 150px;
             width: 200px;
             height: 200px;
+            transition: 1s;
         }
 
         .cube_face {
@@ -74,18 +76,50 @@
             transform: rotatex(-90deg) translateZ(100px);
         }
 
-        .cube {
-            animation: rotatey 30s infinite linear;
-        }
-
         @keyframes rotatey {
             0% {
-                transform: rotatey(0deg);
+                transform: translateZ(-100px) rotatey(0deg);
             }
 
             100% {
-                transform: rotatey(360deg);
+                transform: translateZ(-100px) rotatey(360deg);
             }
+        }
+
+        #auto:checked~.cube {
+            animation: rotatey 30s infinite linear;
+        }
+
+        #front:checked~.cube {
+            transform: translateZ(-100px) rotateY(0deg);
+        }
+        #back:checked~.cube {
+            transform: translateZ(-100px) rotateY(180deg);
+        }
+        #left:checked~.cube {
+            transform: translateZ(-100px) rotateY(270deg);
+        }
+        #right:checked~.cube {
+            transform: translateZ(-100px) rotateY(90deg);
+        }
+        #top:checked~.cube {
+            transform: translateZ(-100px) rotatex(-90deg);
+        }
+        #bottom:checked~.cube {
+            transform: translateZ(-100px) rotatex(90deg);
+        }
+       
+
+        label {
+            background: black;
+            color: #fff;
+            padding: 4px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input {
+            display: none;
         }
     </style>
 </head>
@@ -93,6 +127,23 @@
 <body>
     <h1>3D cube</h1>
     <div class="scene">
+
+        <label for="auto">auto</label>
+        <label for="front">front</label>
+        <label for="back">back</label>
+        <label for="left">left</label>
+        <label for="right">right</label>
+        <label for="top">top</label>
+        <label for="bottom">bottom</label>
+
+        <input type="radio" name="cube" id="auto">
+        <input type="radio" name="cube" id="front">
+        <input type="radio" name="cube" id="back">
+        <input type="radio" name="cube" id="left">
+        <input type="radio" name="cube" id="right">
+        <input type="radio" name="cube" id="top">
+        <input type="radio" name="cube" id="bottom">
+
         <div class="cube">
             <div class="cube_face cube_face_front">front</div>
             <div class="cube_face cube_face_back">back</div>

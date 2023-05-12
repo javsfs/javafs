@@ -6,8 +6,12 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-
+li{
+    list-style: none;
+}
+img{
+    width: 100%;
+}
 /* header::after,
 .contents::after,
 footer::after {
@@ -51,9 +55,27 @@ nav {
 /* 슬라이드 */
 #slide {
     height: 300px;
-    background: lightcoral
+    background: lightcoral;
+    /* overflow: hidden; */
 }
 
+#slide ul{
+    position: relative;
+    left: 0;
+    display: flex;
+    width: 400%;
+    animation: slide 15s infinite;
+}
+@keyframes slide{
+    0%{left: 0;}
+    5%{left: -100%;}
+    33%{left: -100%;}
+    38%{left: -200%;}
+    66%{left: -200%;}
+    71%{left: -300%;}
+    99.99%{left: -300%;}
+    100%{left: 0;}
+}
 /* //슬라이드 */
 /* 메인콘텐츠 */
 #contents {

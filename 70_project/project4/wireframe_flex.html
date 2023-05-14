@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,35 +8,97 @@
     <title>아무거나</title>
     <link rel="stylesheet" href="/70_project/project4/css/wireframe_flex.css">
 </head>
-<body>
-<div id="wrap">
-    <!-- 헤더 -->
-<header class="clearfix"> <!-- //헤더 -->
-<h1 class="logo"><a href="#">Just 쇼핑몰</a></h1>
-<nav>내비게이션
-    <!-- ul.main>li*4<a{메뉴$}+ul.sub>li*4>a{서브$} -->
- 
-</nav>
-</header><!-- //헤더 -->
-<!-- 슬라이드 -->
-<section>
-<div id="slide">이미지 슬라이드</div><!-- //슬라이드 -->
-</section>
-<!-- 메인 콘텐츠-->
-<section>
-    <div id="contents" class="clearfix">
-        <div class="tabs">공지사항/갤러리</div>
-        <div class="banner">배너</div>
-        <div class="shortcut">바로가기</div>
-    </div>
 
-</section><!-- //메인 콘텐츠-->
-<!-- 푸터 -->
-<footer class="clearfix">
-<div class="b_logo">하단로고</div>
-<div class="addr">주소</div>
-<div class="sns">sns</div>
-</footer><!-- //푸터 -->
-</div>
+<body>
+    <div id="wrap">
+        <!-- 헤더 -->
+        <header class="clearfix"> <!-- //헤더 -->
+            <h1 class="logo"><a href="#"><img src="images/logo.png" alt="just 쇼핑몰"></a></h1>
+            <nav>내비게이션
+                <!-- emmet기능 -> ul.main>li*4>a{메인메뉴$}+ul.sub>li*4>a{서브메뉴$} -->
+                <ul class="main">
+                    <li>
+                        <a href="#">메가 스토리</a>
+                        <ul class="sub">
+                            <li><a href="#">브랜드</a></li>
+                            <li><a href="#">BI</a></li>
+                            <li><a href="#">오시는길</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">메뉴소개</a>
+                        <ul class="sub">
+                            <li><a href="#">음료</a></li>
+                            <li><a href="#">푸드</a></li>
+                            <li><a href="#">상품</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">창업안내</a>
+                        <ul class="sub">
+                            <li><a href="#">개설비용</a></li>
+                            <li><a href="#">인테리어</a></li>
+                            <li><a href="#">창업안내</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">메가소식</a>
+                        <ul class="sub">
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">이벤트</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">고객의소리</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </nav>
+        </header><!-- //헤더 -->
+        <!-- 슬라이드 -->
+        <section>
+            <div id="slide">
+                <ul>
+                    <li><a href="#"><img src="images/m1.jpg" alt="Daily item 기획전"></a></li>
+                    <li><a href="#"><img src="images/m2.jpg" alt="160cm 인생바지"></a></li>
+                    <li><a href="#"><img src="images/m3.jpg" alt="온라인/오프라인 봄 신상품 입고"></a></li>
+                    <li><a href="#"><img src="images/m1.jpg" alt="Daily item 기획전"></a></li>
+                </ul>
+            </div>
+            <!-- //슬라이드 -->
+        </section>
+        <!-- 메인 콘텐츠-->
+        <section>
+            <div id="contents" class="clearfix">
+                <div class="tabs">
+                    <div>
+                        <ul>
+                            <li><a href="#">메가MGC커피 원두 관련 공지</a></li>
+                            <li><a href="#">탄소중림실천포인트 재도입 안내</a></li>
+                            <li><a href="#">메가MGC커피 영양성분표</a></li>
+                            <li><a href="#">마진없이 아낌없이 드리는 마지막 찬스!</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <a href="#"><img src="images/i1.jpg" alt="모자"></a>
+                        <a href="#"><img src="images/i2.jpg" alt="클러치백"></a>
+                        <a href="#"><img src="images/i3.jpg" alt="장갑"></a>
+                    </div>
+                </div>
+                <div class="banner"><img src="images/banner.jpg" alt="dress 1+1 보러가기"></div>
+                <div class="shortcut"><img src="images/quick.jpg" alt="모바일 앱 설치"></div>
+            </div>
+
+        </section><!-- //메인 콘텐츠-->
+        <!-- 푸터 -->
+        <footer class="clearfix">
+            <div class="b_logo"><img src="images/logo2.png" alt="just 쇼핑몰"></div>
+            <div class="addr">
+                <p>서울특별시 강남구 강남대로 518 11층, 13층 (주)앤하우스</p>
+                <p>COPYRIGHT 2023 메가MGC커피. ALL RIGHTS RESERVED.</p>
+            </div>
+            <div class="sns">sns</div>
+        </footer><!-- //푸터 -->
+    </div>
 </body>
+
 </html>

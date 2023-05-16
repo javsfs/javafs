@@ -1,117 +1,189 @@
 @charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&display=swap');
+/* @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'); */
 
 /* 초기화 */
 * {
-    margin: 0;
-    padding: 0;
+    margin:0;
+    padding:0;
     box-sizing: border-box;
 }
-
-/* float 사용했을때 */
-/* .clearfix::after {
-    content: '';
-    clear: both;
-    display: block;
-} */
-
-/* header::after,
-.contents::after,
-footer::after {
-    content: '';
-    clear: both;
-    display: block;
-} */
-
+html {
+    font-size: 10px;
+}
+li {
+    list-style: none;
+}
+img {
+    width: 100%;
+}
+body {
+    font: 1.5rem/1.8 'Noto Sans KR', sans-serif;
+    color: #333;
+}
+a {
+    text-decoration: none;
+    color: #333;
+}
+img{
+    vertical-align: top;
+}
 /* 공통 */
 #wrap {
+    /* 가로 가운데 맞춤 */
     width: 1200px;
     margin: 0 auto;
-    /* 가운데 맞춤 */
 }
-
-/* flex를 사용했을때 */
-header, #contents, footer{
-    display: flex;
-}
-
-
-/* 밑에는 float 사용했을때 */
-/* .logo,
-nav,
-#contents div,
-footer div {
-    float: left;
-} */
 
 /* 헤더 */
 header {
-    background: lightblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
 }
 
 /* 로고 */
 .logo {
     width: 200px;
-    height: 100px;
-    background: lightpink;
 }
-
 /* 내비게이션 */
-nav {
-    width: 1000px;
-    height: 100px;
-    background: lightgreen;
+nav .main {
+    display: flex;
+}
+nav li {
+    width: 150px;
+    margin-left: 8px;
+    text-align: center;
+    background: #672F2E;
+}
+nav .main > li > a {
+    font-size: 1.8rem;
+    color: #fff;
+}
+nav .sub {
+    display: none;
 }
 
-/* //헤더 */
 /* 슬라이드 */
 #slide {
     height: 300px;
-    background: lightcoral
+    background: lightcoral;
+    overflow:hidden;
+}
+#slide ul {
+    position: relative;
+    left:0;
+    display: flex;
+    width: 400%;
+    animation: slide 9s infinite;
 }
 
-/* //슬라이드 */
-/* 메인콘텐츠 */
-#contents {
-    background: lightcyan;
+@keyframes slide {
+    0% {left:0;}
+    5% {left:-100%;}
+    33% {left:-100%;}
+    38% {left:-200%;}
+    66% {left:-200%;}
+    71% {left:-300%;}
+    99.99% {left:-300%;}
+    100% {left:0;}
 }
 
+#slide img {
+    height: 300px;
+}
+
+/* 메인 콘텐츠 */
+#contents{
+    display: flex;
+    padding: 8px 0;
+}
 #contents div {
     width: 400px;
     height: 200px;
 }
-
+/* 탭 메뉴 */
 .tabs {
-    background: gold;
+    padding: 24px 0;
+}
+.tabs input, .tabs div {
+    display: none;
+}
+#btn1:checked ~ #tab1, #btn2:checked ~ #tab2 {
+    display: block;
+}
+/* 탭 메뉴 - 제목/버튼 */
+.tabs label {
+    display: inline-block;
+    padding: 4px 16px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    font-size: 1.6rem;
+    font-weight: 500;
+    background: #EBDACA;
+    color: #111;
+}
+#btn1:checked + label, #btn2:checked + label {
+    background: #672F2E;
+    color: #fff;
 }
 
+/* 탭 메뉴 - 공지사항 */
+#tab1 ul>li{
+    border-bottom: 1px dotted #777;
+}
+/* 탭 메뉴 - 갤러리 */
+#tab2 img {
+    width: 110px;
+}
+
+/* 배너 */
 .banner {
     background: lavender;
 }
-
+/* 바로가기 */
 .shortcut {
     background: greenyellow;
 }
 
-/* //메인콘텐츠 */
 /* 푸터 */
-footer {
-    background: lightgoldenrodyellow;
+footer{
+    display: flex;
+    color: #e8e8e8;
+    padding-left: 350px;
+    background:  #777 url(../images/logo2.png)no-repeat 50px 50%;
 }
-
-.b_logo {
-    width: 200px;
-    height: 100px;
-    background: firebrick;
-}
-
 .addr {
-    width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 1200px;
     height: 100px;
-    background: blueviolet;
 }
 
 .sns {
-    width: 200px;
+    display: flex;
+    align-items: center;
+    font-size: 3rem;
+    /* flex는 glow shrink basis */
+    flex: 0 0 200px;
     height: 100px;
-    background: aquamarine;
+}
+.sns a:hover{
+    transform: scale(1.2, 1.2);
+}
+/* .sns a{
+    color: #bababa;
+    margin: 0 8px;
+    transition: .3s;
+} */
+.sns a:nth-of-type(1):hover{
+    color: #395498;
+}
+.sns a:nth-of-type(2):hover{
+    color: #1c9cea;
+}
+.sns a:nth-of-type(3):hover{
+    color: #f06065;
 }

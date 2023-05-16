@@ -133,11 +133,28 @@ nav .sub {
 #tab1 ul>li{
     border-bottom: 1px dotted #777;
 }
+.tab1{
+    display: inline-block;
+    display: flex;
+    flex-direction: column;
+}
+.tab1 a{
+    display: inline-block;
+    width: 300px;
+    color: #777;
+}
+.tab1 a:hover{
+    color: black;
+}
+
 /* 탭 메뉴 - 갤러리 */
 #tab2 img {
     width: 110px;
 }
-
+#tab2{
+    display: flex;
+    justify-content: space-between;
+}
 /* 배너 */
 .banner {
     background: lavender;

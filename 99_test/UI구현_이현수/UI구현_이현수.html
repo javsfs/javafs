@@ -17,6 +17,7 @@
 
     p,
     a {
+        text-decoration: none;
         border: 1px solid #000000;
     }
 
@@ -48,7 +49,9 @@
     li {
         list-style: none;
     }
-
+    img{
+        width: 100%;
+    }
     /* 헤더 */
     header {
         position: fixed;
@@ -86,29 +89,22 @@
 
     /* 섹션2 */
 
-    #menu {
+    #menu li{
         position: relative;
     }
 
     #menu ul {
         display: flex;
         flex-wrap: wrap;
-        justify-content: flex-start;
+        justify-content: space-between;
     }
 
-    #menu li:not(:nth-of-type(4n)) {
-        margin-right: 16px;
-    }
-
-    /* #menu li:not(:nth-of-type(5))~8 {
-        margin-top: 16px;
-    } */
-    .po1 {
+   
+    #menu li h3 {
         position: absolute;
         padding: 8px 16px;
         background: black;
         color: white;
-        margin: 0, auto;
     }
 
     /* //섹션2 */
@@ -121,7 +117,8 @@
 
     #event li {
         display: inline-block;
-        justify-content: flex-start;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
 
     #event li:not(:nth-of-type(4n)) {
@@ -201,35 +198,35 @@
         <h2 id="Projects">메뉴소개</h2>
         <ul>
             <li>
-                <h3 class="po1">Summer House</h3><img src="https://dummyimage.com/362x243/cccccc/fff&text=+"
+                <h3>Summer House</h3><img src="https://dummyimage.com/362x243/cccccc/fff&text=+"
                     alt="Summer House">
             </li>
             <li>
-                <h3 class="po1">Brick House</h3><img src="https://dummyimage.com/362x243/cccccc/fff&text=+"
+                <h3>Brick House</h3><img src="https://dummyimage.com/362x243/cccccc/fff&text=+"
                     alt="Brick House">
             </li>
             <li>
-                <h3 class="po1">Renovated</h3><img src="https://dummyimage.com/362x243/cccccc/fff&text=+"
+                <h3>Renovated</h3><img src="https://dummyimage.com/362x243/cccccc/fff&text=+"
                     alt="Renovated">
             </li>
             <li>
-                <h3 class="po1">Barn House</h3><img src="https://dummyimage.com/362x243/cccccc/fff&text=+"
+                <h3>Barn House</h3><img src="https://dummyimage.com/362x243/cccccc/fff&text=+"
                     alt="Barn House">
             </li>
             <li>
-                <h3 class="po1">Summer House </h3><img src="https://dummyimage.com/362x243/cccccc/fff&text=+"
+                <h3>Summer House </h3><img src="https://dummyimage.com/362x243/cccccc/fff&text=+"
                     alt="Summer House">
             </li>
             <li>
-                <h3 class="po1">Brick House</h3><img src="https://dummyimage.com/362x243/cccccc/fff&text=+"
+                <h3>Brick House</h3><img src="https://dummyimage.com/362x243/cccccc/fff&text=+"
                     alt="Brick House">
             </li>
             <li>
-                <h3 class="po1">Renovated</h3><img src="https://dummyimage.com/362x243/cccccc/fff&text=+"
+                <h3>Renovated</h3><img src="https://dummyimage.com/362x243/cccccc/fff&text=+"
                     alt="Renovated">
             </li>
             <li>
-                <h3 class="po1">Barn House</h3><img src="https://dummyimage.com/362x243/cccccc/fff&text=+"
+                <h3>Barn House</h3><img src="https://dummyimage.com/362x243/cccccc/fff&text=+"
                     alt="Barn House">
             </li>
         </ul>

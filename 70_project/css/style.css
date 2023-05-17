@@ -55,17 +55,113 @@ header i {
 .container {
     width: 960px;
     margin: 0 auto;
+    padding-bottom: 81px;
+}
+
+section h2 {
+    text-align: center;
+    margin-top: 81px;
+}
+
+section h2+p {
+    text-align: center;
+    margin: 27px 0;
 }
 
 .parallax {
+    position: relative;
     height: 410px;
+    background: no-repeat 50% 50%/cover fixed;
 }
 
+.parallax b {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
 
 /* 섹션2 */
 .photo {
     width: 425px;
-    height: 290px;
+}
+.photo img{
+    margin-top: 54px;
+}
+.photo b{
+    margin-left: 8px;
+}
+.profile {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.profile p {
+    text-align: justify;
+    word-break: break-all;
+}
+
+.profile p:first-of-type {
+    flex: 100%;
+    margin-bottom: 54px;
+}
+
+.profile div {
+    flex: 0 0 48%;
+    text-align: center;
+}
+
+.profile p:last-of-type {
+    flex: 0 0 48%;
+}
+
+/* 섹션2 - skill */
+#about h3 {
+    text-align: center;
+    margin: 54px 0;
+}
+
+.progress .lst>span {
+    display: inline-block;
+    margin: 16px;
+}
+
+.progress .lst div {
+    background: #eee;
+}
+
+.progress .lst div span {
+    display: block;
+    height: 34px;
+    text-align: center;
+    background: #555;
+}
+
+.progress .lst:nth-of-type(1) div span {
+    width: 95%;
+}
+
+.progress .lst:nth-of-type(2) div span {
+    width: 85%;
+}
+
+.progress .lst:nth-of-type(3) div span {
+    width: 75%;
+}
+
+.counter {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 132px;
+    background: #616161;
+    color: #fff;
+}
+
+.counter span {
+    display: block;
+    text-align: center;
 }
 
 /* 섹션3 */
@@ -96,3 +192,34 @@ gutter: 12px
 }
 
 /* 푸터 */
+footer {
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+    text-align: center;
+    padding: 54px 0 81px;
+    height: 270px;
+    background: #555;
+}
+
+footer:hover {
+    background: black;
+}
+
+footer .topbtn a {
+    background: #ccc;
+    padding: 8px 16px;
+}
+
+footer .topbtn a:hover {
+    background: #555;
+}
+
+footer .topbtn i {
+    margin-right: 16px;
+}
+
+footer .sns {
+    margin: 12px 0 16px;
+}

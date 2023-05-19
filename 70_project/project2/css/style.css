@@ -1,7 +1,10 @@
 @charset "utf-8";
+
 @font-face {
     font-family: GothicA1;
-    src: url(../font/GothicA1.ttf);}
+    src: url(../font/GothicA1.ttf);
+}
+
 /* 공용 */
 html {
     scroll-behavior: smooth;
@@ -48,6 +51,7 @@ h2 {
 h1 {
     font-size: 3rem;
 }
+
 /* font-face사용하여 h3에 GothicA1체 적용 */
 h3 {
     font-size: 1.8rem;

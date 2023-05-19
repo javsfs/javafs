@@ -1,0 +1,272 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: GothicA1;
+    src: url(../font/GothicA1.ttf);
+}
+
+/* 공용 */
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 10px;
+}
+
+body {
+    background: #fff;
+    font-size: 1.5rem/1.8 Verdana, sans-serif;
+    line-height: 1.8;
+    color: #333;
+}
+
+img {
+    width: 100%;
+    vertical-align: top;
+}
+
+/* li항목 마커제거 */
+li {
+    list-style: none;
+}
+
+button {
+    background: transparent;
+    border: none;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: normal;
+    letter-spacing: 4px;
+}
+
+h2,
+h3 {
+    font-family: 'segou UI, sans-serif';
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 2.4rem;
+}
+
+/* font-face사용하여 h3에 GothicA1체 적용 */
+h3 {
+    font-size: 1.6rem;
+    font-family: GothicA1;
+}
+
+a {
+    color: #555;
+    text-decoration: none;
+}
+
+button {
+    color: #fff;
+}
+
+::placeholder {
+    color: #ccc;
+}
+
+.main_tit {
+    font-size: 3.6rem;
+    letter-spacing: 4px;
+    color: rgba(255, 255, 255, .5);
+}
+
+/* nav font */
+nav ul li a {
+    font-size: 1.5rem;
+}
+
+/* 섹션2~4 flex 공용 */
+.section ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+.section {
+    width: 1496px;
+    margin: 0 auto;
+    padding: 81px 0 0;
+}
+.section h2 {
+    line-height: 1;
+    border-bottom: 1px solid #f1f1f1;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+.section li img{
+    margin-bottom: 16px;
+    box-shadow: 0 2px 5px rgba(255, 41, 41, 0.16);
+}
+/* 헤더 */
+/* 헤더 상단 고정 */
+header {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    height: 54px;
+    padding: 16px 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+    z-index: 9999;
+}
+
+/* 네비 flex사용 */
+nav ul {
+    display: flex;
+}
+
+nav li:not(:first-of-type) {
+    margin-left: 36px;
+}
+
+nav {
+    display: block;
+}
+
+/* 섹션1 */
+/* position사용하여 이미지 가운데 로고넣기 */
+#main {
+    position: relative;
+}
+
+#main h2 {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    background: rgba(255, 150, 150, 0.445);
+    color: aliceblue;
+}
+
+
+/* 섹션2 */
+/* position사용하여 이미지안에 이미지제목 넣기 */
+#Gold li {
+    position: relative;
+}
+#Gold h2 {
+    margin-bottom: 40px;
+}
+#Gold h3 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 4px 12px;
+    background: rgb(255, 59, 65);
+    color: rgb(255, 171, 14);
+}
+
+/* 섹션3 */
+#Diamond>p {
+    margin-bottom: 40px;
+}
+
+#Diamond h3 {
+    margin-top: 16px;
+}
+
+#Diamond li p:first-of-type {
+    margin: 8px 0;
+}
+
+#Diamond a {
+    display: block;
+    text-align: center;
+    border: 1px solid #ccc;
+    letter-spacing: 8px;
+}
+
+#Diamond a:hover {
+    background: #c9c9c9;
+}
+
+/* 섹션4 */
+form input {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin: 15px 0;
+    border: 1px solid #ccc;
+}
+
+#comment button {
+    background: #000;
+    margin: 20px 0 45px;
+    padding: 12px 16px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+}
+
+button {
+    padding: 12px 16px;
+    margin: 16px 0 54px;
+    border: none;
+    background: #000;
+    color: #fff;
+}
+
+button:hover {
+    background-color: #9c9c9c;
+}
+
+iframe {
+    width: 1496px;
+    height: 810px;
+}
+
+/* 푸터 */
+footer {
+    height: 81px;
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 32px 0;
+}
+
+@media(min-width:390px){
+/* header */
+
+nav {
+    display: none;
+}
+/* section1 */
+#main span {
+    display: none;
+}
+
+/* section2 */
+
+/* section3 */
+
+/* section4 */
+
+/* footer */
+}
+
+
+
+
+
+@media(min-width:768px){
+    
+}

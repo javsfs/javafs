@@ -85,12 +85,15 @@ section h2+p {
 .photo {
     width: 425px;
 }
-.photo img{
+
+.photo img {
     margin-top: 54px;
 }
-.photo b{
+
+.photo b {
     margin-left: 8px;
 }
+
 .profile {
     display: flex;
     flex-wrap: wrap;
@@ -175,9 +178,8 @@ gutter: 12px
     background: url(../images/a2.png) no-repeat 50% 50%/cover fixed;
 }
 
-#portfolio li {
-    width: 231px;
-    height: 162px;
+#portfolio .container {
+    text-align: center;
 }
 
 #portfolio ul {
@@ -186,9 +188,75 @@ gutter: 12px
     justify-content: space-between;
 }
 
+#portfolio li {
+    width: 231px;
+    height: 162px;
+    margin-bottom: 12px;
+    overflow: hidden;
+}
+
+#portfolio .morebtn {
+    margin-top: 64px;
+    text-align: center;
+}
+
+#portfolio .morebtn a {
+    background: #f1f1f1;
+    padding: 12px 24px;
+
+}
+
+#portfolio .morebtn a:hover {
+    background: #ccc;
+}
+
 /* 섹션4 */
 #contact .parallax {
     background: url(../images/a4.png) no-repeat 50% 50%/cover fixed;
+}
+
+#contact .container {
+    display: flex;
+}
+
+#map {
+    flex: 0 0 330px;
+    height: 160px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-right: 30px;
+}
+
+#contact address i {
+    margin-right: 20px;
+}
+
+#contact address+p {
+    margin: 16px 0;
+}
+#contact form{
+    text-align: right;
+}
+[name] {
+    height: 44px;
+    padding-left: 8px;
+    width: 292px;
+}
+
+#contact [name=user_name] {
+    margin-right: 12px;
+}
+
+[name*="message"] {
+    width: 600px;
+    margin: 16px 0;
+}
+
+#contact button {
+    width: 160px;
+    height: 44px;
+    background-color: #000;
+    color: #fff;
 }
 
 /* 푸터 */

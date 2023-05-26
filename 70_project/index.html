@@ -86,7 +86,7 @@
                 <li><img src="images/pf7.jpg" alt="포토폴리오7"></li>
                 <li><img src="images/pf8.jpg" alt="포토폴리오8"></li>
             </ul>
-            <a href="#">LOAD MORE</a>
+            <div class="morebtn"><a href="#">LOAD MORE</a></div>
         </div><!-- //.container -->
     </section>
 
@@ -94,26 +94,28 @@
 
     <section id="contact">
         <div class="parallax"><b>CONTACT</b></div>
-        <div class="container">
+       
             <h2>WHERE I WORK</h2>
             <p>I'd love your feedback!</p>
-            <img src="images/map.jpg" alt="내가 있는 위치">
             <!-- 구글맵 -->
+             <div class="container">
             <div id="map"><iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3169.6232893092324!2d126.92079500000001!3d37.398740200000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b60d1eba1f981%3A0x7e2aebe0591be746!2z7JWI7JaR6rOg7Jqp67O17KeAK-yEvO2EsA!5e0!3m2!1sko!2skr!4v1682405730412!5m2!1sko!2skr"></iframe>
             </div>
-            <address>
-                경기도 안양시<br>
-                Phone: +28 10-4193-4443<br>
-                Email: counman4@naver.com
-            </address>
-            <p>Swing by for a cup of, or leave me a note:</p>
-            <form action="message.php" method="post">
-                <input type="text" name="user_name" placeholder="이름을 입력하세요">
-                <input type="email" name="user_email" placeholder="이메일을 입력하세요">
-                <input type="text" name="user_massage" placeholder="메세지를 간단하게 기록하세요.">
-                <button type="submit"><i class="fa-solid fa-paper-plane"></i>SEND MESSAGE</button>
-            </form>
+            <div>
+                <address>
+                    <i class="fa-solid fa-location-dot"></i>경기도 안양시<br>
+                    <i class="fa-solid fa-phone"></i>Phone: +28 10-4193-4443<br>
+                    <i class="fa-solid fa-envelope"></i>Email: counman4@naver.com
+                </address>
+                <p>Swing by for a cup of<i class="fa-solid fa-mug-hot"></i>, or leave me a note:</p>
+                <form action="message.php" method="post">
+                    <input type="text" name="user_name" placeholder="이름을 입력하세요">
+                    <input type="email" name="user_email" placeholder="이메일을 입력하세요">
+                    <input type="text" name="user_message" placeholder="메세지를 간단하게 기록하세요.">
+                    <button type="submit"><i class="fa-solid fa-paper-plane"></i>SEND MESSAGE</button>
+                </form>
+            </div>
         </div><!-- //.container -->
     </section>
 

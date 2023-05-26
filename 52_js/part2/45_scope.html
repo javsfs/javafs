@@ -20,6 +20,20 @@
                 - 자바스크립트 모든 영역에서 사용할 수 있는 변수
         */
 
+        let a = 10;
+        // let은 재선언 할 수 없다,
+        //  let a = 5;
+        // let은 재할당은 가능하다
+        a= 15;
+
+        function myFn() {
+            // 지역 변수
+            let b = 5;
+            document.write('지역변수a = ' + b, '<br>')
+        }
+
+        myFn();
+        document.write('전역변수a = ' + a, '<br>')
 
 
     </script>

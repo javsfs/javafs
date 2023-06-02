@@ -55,6 +55,10 @@
         .flex p {
             font-size: 1.6rem;
         }
+
+        img {
+            width: 100%;
+        }
     </style>
 </head>
 
@@ -96,7 +100,7 @@
             } else {
                 result = '무승부!';
             }
-            
+
             pTag.innerHTML = result;
             // 주사위 값에 따라 이미지바뀜
             playerdice.setAttribute('src', 'images/dice' + player + '.png');

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주사위게임_이현수</title>
+    <style>
+        /* 가로 해상도: 390px */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #wrap {
+            position: fixed;
+            top: 100px;
+            margin: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 32px;
+        }
+
+        p {
+            font-size: 14px;
+            color: red;
+        }
+
+        input {
+            width: 100%;
+            font-size: 20px;
+            border: 1px solid #444;
+            margin: 8px 0;
+            padding: 16px;
+        }
+
+        button {
+            width: 100%;
+            margin: 8px 0;
+            padding: 8px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <h1>주사위게임 회원가입</h1>
+        <input type="text" placeholder="아이디를 입력하세요." id="memberId">
+        <input type="text" placeholder="패스워드를 입력하세요." id="memberPw">
+        <button>확인</button>
+        <p>아이디와 패스워드를 입력후 가입하기를 누르세요.</p>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        // 데이터베이스(Database, DB)
+        const userId = 'korea';
+        const userPw = '1234';
+
+        const memberId = document.querySelector('#memberId');
+        const memberPw = document.querySelector('#memberPw');
+
+        const memberBtn = document.querySelector('button');
+
+        // 로그인 시 입력한 아이디/패스워드
+
+        memberBtn.onclick = member;
+
+        function member() {
+            let userId = memberId.value;
+            let userPw = memberPw.value;
+            location.href = '03_login.html?' + userId + '/' + userPw;
+        };
+
+    </script>
+</body>
+
+</html>

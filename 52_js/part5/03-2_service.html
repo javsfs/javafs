@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주사위게임_이현수</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 10px;
+        }
+
+        #wrap {
+            margin: 100px 30px 0;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 32px;
+        }
+
+        #result {
+            font-size: 1.6rem;
+            color: red;
+        }
+
+        button {
+            width: 100%;
+            margin: 8px 0px;
+            padding: 8px;
+            font-size: 20px;
+        }
+
+        .flex {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 50px;
+        }
+
+        .flex p {
+            font-size: 1.6rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <h1>주사위 게임</h1>
+        <p id="result">플레이어 VS 컴퓨터</p>
+        <div class="flex">
+            <div>
+                <img src="../assets/dice1.png" alt="playerdice" id="playerdice">
+                <p>플레이어</p>
+            </div>
+            <div>
+                <img src="../assets/dice1.png" alt="comdice" id="computerdic">
+                <p>컴퓨터</p>
+            </div>
+        </div>
+        <button onclick="rollDice()">주사위 굴리기</button>
+        <button id="Home">게임 종료하기</button>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+
+        const playerdice = document.getElementById('playerdice')
+        const computerdic = document.getElementById('computerdic')
+        const pTag = document.getElementById('result')
+        const Home = document.getElementById('Home')
+
+
+        function rollDice() {
+            const player = Math.floor(Math.random() * 6) + 1;
+            const computer = Math.floor(Math.random() * 6) + 1;
+
+            let result = '';
+
+            if (player > computer) {
+                result = '플레이어 승리!';
+            } else if (player < computer) {
+                result = '컴퓨터 승리!';
+            } else {
+                result = '무승부!';
+            }
+
+            pTag.innerHTML = result;
+            playerdice.setAttribute('src', '../assets/dice' + player + '.png');
+            computerdic.setAttribute('src', '../assets/dice' + computer + '.png');
+        };
+
+        Home.onclick = function () {
+            location.href = '03_login.html';
+        }
+
+    </script>
+</body>
+
+</html>

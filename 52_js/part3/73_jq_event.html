@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS+JS</title>
+    <style>
+        body {
+            height: 2000px;
+        }
+
+        div {
+            width: 300px;
+            height: 300px;
+            margin: 50px;
+            font-size: 50px;
+            color: #fff;
+        }
+
+        .box1 {
+            background: red;
+        }
+
+        .box2 {
+            background: blue;
+        }
+
+        p {
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">박스1</div>
+    <div class="box2">박스2</div>
+    <p></p>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+    <script>
+        /*
+            Event(이벤트): 웹 문서 영역 안에서 웹 브라우저 또는 사용자가 행하는 동작
+
+            이벤트 종류
+            1. 마우스 이벤트: click, mouseenter, mouseleave, mousemove
+            2. 키보드 이벤트: keydown, keypress, keyup
+            3. 윈도우 이벤트: scroll, resize
+
+            이벤트 처리기(이벤트 핸들러): 이벤트가 발생할 때 그 이벤트에 반응하여 실행하는 함수
+
+            //방법1
+            <태그 on이벤트명="함수명()">
+
+            //방법2
+            1. 요소.on이벤트명 = 함수;
+            function 함수(){}
+
+            2. 요소.on이벤트명 = function(){};
+            
+            //방법3
+            1. 요소.addEventListener('이벤트명1','이벤트명2', ... , 함수);
+            function 함수(){};
+
+            2. 요소.addEventListener('이벤트명', function(){});
+
+            //제이쿼리
+            $('선택자').이벤트명(function(){});
+            $('선택자').on('이벤트명', function(){});
+
+            요소.innerText=값;
+            $('선택자').text(값);
+
+        */
+
+        const box1 = $('.box1');
+        const box2 = $('.box2');
+        const pTag = $('p');
+
+        box1.click(function () {
+            pTag.text('box1을 클릭');
+        });
+
+        box1.mouseenter(ev);
+        function ev() {
+            pTag.text('box1에 마우스를 올림');
+        };
+
+        box1.on('mouseleave', function () {
+            pTag.text('box1에서 마우스가 벗어남');
+        });
+
+        box2.on('mousemove', function () {
+            console.log('mousemove');
+            pTag.text('box2에서 마우스가 움직임');
+        });
+
+        $(window).on('scroll', function () {
+            pTag.text('스크롤 되었습니다.');
+        });
+        $(window).on('resize', function () {
+            pTag.text('창이 크기가 조정되었습니다.');
+        });
+
+    </script>
+</body>
+
+</html>

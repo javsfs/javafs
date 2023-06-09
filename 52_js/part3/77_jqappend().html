@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+JS</title>
+</head>
+
+<body>
+    <h1>텍스트 노드를 사용하는 새로운 요소 추가하기</h1>
+    <div id="info"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+
+
+        /* 
+            노드 객체의 프로퍼티
+                parentNode: 기준 노드의 부모 노드를 참조합니다. Document 객체일 경우 부모 노드가 없음으로 null이 됩니다.
+                childNode: 기준 노드의 자식 노드의 참조가 저장된 유사 배열을 참조합니다.(유사 배열은 NodeList 형태입니다.)
+                firstChild: 기준 노드의 첫 번째 자식 노드를 참조합니다. 자식이 없는 노드일 경우 null이 됩니다.
+                lastChild: 기준 노드의 마지막 자식 노드를 참조합니다. 마찬가지로 자식이 없는 노드일 경우 null이 됩니다.
+                nextSibling: 기준 노드와 같은 부모 노드를 가진 다음 형제 노드를 참조합니다.
+                previousSibling: 기준 노드와 같은 부모 노드를 가진 이전 형제 노드를 참조합니다.
+                nodeType: 노드 유형을 뜻하는 숫자를 참조합니다.(요소 노드:1, 텍스트 노드: 3, Document:9)
+                nodeValue: 텍스트 노드일 경우 텍스트 콘텐츠를 리턴합니다. 요소 노드는 null를 반환합니다.
+        */
+
+        /* 
+            $('선택자a').createElement('선택자b') ~ 요소a에 요소b 생성
+
+            <div id="info"> prepend내용append</div>
+            A.append(b) ~A에 b추가
+            A.prepend(b)
+            A.agter(b)
+            A.before(b)
+       */
+
+        /* 
+            #info 박스에 p요소를 삽입하고, p요소의 내용으로 'Dom이란 ? Documetn Object Model의 줄임말이다.'을 삽입하여 #info에 연결하시오'
+            메서드 createElement() ,  append()
+        */
+
+        const info = $('#info');
+        const para = document.createElement('p');
+        info.append(para);
+        const txt = 'Dom이란 ? Documetn Object Model의 줄임말이다.';
+        info.append(txt);
+
+        // const Domimg = document.createElement('img');
+        // info.append(Domimg);
+        // Domimg.setAttribute('src', '../assets/htmltree.gif');
+        // Domimg.setAttribute('alt', 'hmltree');
+
+        // $(document).ready(function () {
+        //     const $info = $('#info');
+
+        //     const $para = $('<p></p>').text('Dom이란 ? Documetn Object Model의 줄임말이다.');
+        //     $info.append($para);
+
+        //     const $Domimg = $('<img>').attr('src', '../assets/htmltree.gif').attr('alt', 'hmltree');
+        //     $info.append($Domimg);
+        // });
+
+
+    </script>
+</body>
+
+</html>

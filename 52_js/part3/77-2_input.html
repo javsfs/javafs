@@ -21,6 +21,26 @@
             부모노드.appendChild(자식노드) ~ 부모 노드에 자식 노드 연결
         */
 
+        /* 
+            버튼을 클릭하면 입력 상자에 텍스트를 입력후 입력상자에 입력된 텍스트가 아래목록에 표시되도록 하시오.
+        */
+        const item = document.querySelector('#itemList');
+        const inputBox = document.querySelector('#subject');
+        const btn = document.querySelector('button');
+        
+        btn.onclick = txtList;
+        
+        function txtList() {
+            const liTag = document.createElement('li');
+            let txt = inputBox.value;
+            const itemTxt = document.createTextNode(txt);
+            item.appendChild(liTag);
+            liTag.appendChild(itemTxt);
+            
+            inputBox.value='';
+        }
+
+
     </script>
 </body>
 

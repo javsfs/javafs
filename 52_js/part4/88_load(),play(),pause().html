@@ -8,14 +8,16 @@
     <title>HTML+CSS+JS</title>
     <style>
         .box {
-            width: 800px;
+            width: 400px;
         }
+
         .box video {
             width: 100%;
         }
-        .btnSet li {
+
+        .btnSet button {
             float: left;
-            margin: 0 20px;
+            margin: 30px 20px;
             font: bold 18px/2 arial;
             cursor: pointer;
         }
@@ -23,24 +25,39 @@
 </head>
 
 <body>
+    <div class="btnSet">
+        <button class="load">처음으로</button>
+        <button class="play">재생</button>
+        <button class="pause">일시정지</button>
+    </div>
     <div class="box">
         <video>
-            <source src="../assets/mov_bbb.mp4" type="video/mp4">
+            <source src="../video/uber_main_220126.mp4" type="video/mp4">
         </video>
     </div>
-
-    <ul class="btnSet">
-        <li class="load">load</li>
-        <li class="play">play</li>
-        <li class="pause">pause</li>
-    </ul>
 
     <script>
         /* 
             비디오요소.load() ~ 비디오 불러오기
             비디오요소.play() ~ 비디오 재생하기
-            비디오요소.pause() ~ 비디오 불러오기
+            비디오요소.pause() ~ 비디오 일시정지
         */
+
+        const loadBtn = document.querySelector('.load');
+        const playBtn = document.querySelector('.play');
+        const pauseBtn = document.querySelector('.pause');
+        const vedeobox = document.querySelector('video');
+
+        loadBtn.onclick = function () {
+            vedeobox.load();
+        };
+        playBtn.onclick = function () {
+            vedeobox.play();
+        };
+        pauseBtn.onclick = function () {
+            vedeobox.pause();
+        };
+
 
     </script>
 </body>

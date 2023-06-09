@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS+JS</title>
+    <style>
+        .box {
+            width: 400px;
+        }
+
+        .box video {
+            width: 100%;
+        }
+
+        .btnSet button {
+            float: left;
+            margin: 30px 20px;
+            font: bold 18px/2 arial;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="btnSet">
+        <button class="load">처음으로</button>
+        <button class="play">재생</button>
+        <button class="pause">일시정지</button>
+    </div>
+    <div class="box">
+        <video>
+            <source src="../video/uber_main_220126.mp4" type="video/mp4">
+        </video>
+        <video>
+            <source src="../video/uber_main_220126.mp4" type="video/mp4">
+        </video>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        /* 
+            비디오요소.load() ~ 비디오 불러오기
+            비디오요소.play() ~ 비디오 재생하기
+            비디오요소.pause() ~ 비디오 일시정지
+        */
+
+        const loadBtn = $('.load');
+        const playBtn = $('.play');
+        const pauseBtn = $('.pause');
+        const vedeobox = $('video');
+
+        loadBtn.click(function () {
+            vedeobox[0].load();
+            vedeobox[1].load();
+
+        });
+        playBtn.click(function () {
+            vedeobox[0].play();
+            vedeobox[1].play();
+
+        });
+        pauseBtn.click(function () {
+            vedeobox[0].pause();
+            vedeobox[1].pause();
+
+        });
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS+JS</title>
+    <style>
+        .vid {
+            width: 400px;
+            position: relative;
+        }
+
+        .vid video {
+            width: 100%;
+        }
+
+        .btnSet button {
+            float: left;
+            margin: 30px 20px;
+            font: bold 18px/2 arial;
+            cursor: pointer;
+        }
+
+        .btn {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            top: 50%;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            text-indent: -999em;
+            cursor: pointer;
+        }
+
+        .btn::after {
+            content: '';
+            position: absolute;
+            left: 55%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            display: block;
+            width: 0;
+            height: 0;
+            border-left: 40px solid #fff;
+            border-top: 25px solid transparent;
+            border-bottom: 25px solid transparent;
+        }
+
+        .btn.on::after {
+            left: 50%;
+            width: 40px;
+            height: 40px;
+            border: none;
+            background: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="vid">
+        <video>
+            <source src="../video/uber_main_220126.mp4" type="video/mp4">
+        </video>
+        <span class="btn">버튼</span>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        /* 
+            비디오요소.load() ~ 비디오 불러오기
+            비디오요소.play() ~ 비디오 재생하기
+            비디오요소.pause() ~ 비디오 일시정지
+        */
+
+        /* 
+            버튼을 처음 클릭하면 비디오가 실행되고 두 번째 클릭하면 비디오가 일시정지 되도록하시오. 
+            -> 토글 버튼을 만드시오,
+            토글(toggle): 두 가지 상태를 번갈아 반복
+
+            이벤트 : click
+            메서드 : load(), play() , pause(),get() addClass(),removeClass()
+            제어문 : if
+        */
+        const gostop = $('.btn');
+        const vid = $('video');
+        const btn = $('.btn')
+
+        let num = 0;
+
+        gostop.on('click', function () {
+            if (num === 0) {
+                vid.get(0).play();
+                btn.addClass('on');
+                num = 1;
+            } else {
+                vid.get(0).pause();
+                btn.removeClass('on');
+                num = 0;
+            }
+        });
+
+        /* gostop.onclick =function () {
+            if (vid.paused) {
+                vid.play();
+            } else {
+                vid.pause();
+            }
+        };
+ */
+
+    </script>
+</body>
+
+</html>

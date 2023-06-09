@@ -1,0 +1,181 @@
+@charset "utf-8";
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #000;
+    background: #fff;
+}
+
+a {
+    color: #000;
+}
+
+/* 목록에 마커 제거 */
+li {
+    list-style: none;
+}
+
+/* header */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    padding: 0 32px;
+    height: 54px;
+    background: #777;
+}
+
+.logo {
+    float: left;
+}
+
+nav {
+    float: right;
+}
+
+nav li {
+    display: inline-block;
+}
+
+
+/* section common */
+section {
+    width: 1496px;
+    margin: 0 auto;
+}
+
+.section {
+    padding-top: 81px;
+}
+
+.section h2 {
+    margin-bottom: 16px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 16px;
+}
+
+.section h2+p {
+    margin-bottom: 32px;
+}
+
+/* section1 */
+#main_img {
+    position: relative;
+}
+
+#main_img h2 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 8px 24px;
+}
+
+/* //section1 */
+
+/* section2, 3 common*/
+#menu li,
+#event li {
+    float: left;
+    width: 362px;
+}
+
+/* #menu ul{
+    overflow: hidden;
+} */
+#menu ul::after,
+#event ul::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+#menu li:not(:nth-of-type(4n)),
+#event li:not(:nth-of-type(4n)) {
+    margin-right: 16px;
+}
+
+/* //section2, 3 */
+.po1 {
+    border: 1px solid black;
+    color: black;
+}
+
+/* section2 */
+#menu h2 {
+    margin-bottom: 48px;
+}
+
+#menu h3 {
+    display: inline-block;
+}
+
+.po1 {
+    position: absolute;
+    height: 32px;
+    padding: 8px 16px;
+    margin: 0, auto;
+}
+
+#menu {
+    position: relative;
+}
+
+/* //section2 */
+
+/* section3 */
+#event li h3 {
+    margin: 16px 0 8px;
+}
+
+#event li p {
+    margin: 8px 0;
+}
+
+#event li a {
+    display: block;
+    background: #ccc;
+    text-align: center;
+    padding: 8px 0;
+    margin-top: 16px;
+}
+
+/* //section3 */
+/* section4 */
+
+/*// section4 */
+input {
+    display: block;
+}
+
+form {
+    height: 216px;
+}
+
+form>input {
+    margin-bottom: 8px;
+    padding: 8px 8px;
+    width: 1500px;
+}
+
+button {
+    padding: 8px;
+}
+
+/* footer */
+footer {
+    height: 81px;
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 32px 0;
+}
+
+/* //footer */

@@ -8,24 +8,33 @@
     <title>HTML+CSS+JS</title>
     <style>
         div {
+            position: absolute;
+            left: 0;
+            top: 300px;
             width: 200px;
             height: 200px;
             background: blue;
-            margin-top: 300px;
         }
     </style>
 </head>
 
 <body>
+    <button>버튼</button>
+    <span></span>
     <div></div>
 
     <script>
         /* 
             요소.offsetTop ~ 창 끝에서 요소의 y축 위치 반환
         */
+        const btn = document.querySelector('button');
+        const bluebox = document.querySelector('div');
+        const num = document.querySelector('span');
 
-        let ab = document.querySelector('div').offsetTop;
-        alert(ab);
+        btn.onclick = function () {
+            let posY = bluebox.offsetTop;
+            num.innerText = posY;
+        }
     </script>
 </body>
 

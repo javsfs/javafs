@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시판</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+</head>
+
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <td>id</td>
+                <td>name</td>
+                <td>email</td>
+                <td>phone</td>
+                <td>address</td>
+            </tr>
+        </thead>
+        <tbody class="table_body">
+
+        </tbody>
+        <button type="button" onclick="getJSON()"> json 불러오는 버튼</button>
+    </table>
+    <script>
+        function getJSON() {
+            var apiUrl = 'https://port-0-testsample-e9btb72blgiy226y.sel3.cloudtype.app/sample/list';
+
+            var params = {
+                id: 3
+            };
+
+            $.ajax({
+                type: "POST",
+                url: apiUrl,
+                contentType: "application/json", // Content-Type 헤더 설정
+                data: JSON.stringify(params),    // JSON 데이터를 문자열로 변환하여 전송
+                success: function (response) {
+                    console.log(response);
+                    var posts = response.data;
+                    var tableBody = $('.table_body');
+                    tableBody.empty(); // 이전 데이터를 모두 제거합니다.
+
+                    console.log(posts.length);
+                    for (var i = 0; i < posts.length; i++) {
+                        var post = posts[i];
+                        var row = $('<tr>');
+                        var idCell = $('<td>').text(post.id);
+                        var nameCell = $('<td>').text(post.name);
+                        var emailCell = $('<td>').text(post.email);
+                        var phoneCell = $('<td>').text(post.phone);
+                        var addressCell = $('<td>').text(post.address);
+
+                        row.append(idCell);
+                        row.append(nameCell);
+                        row.append(emailCell);
+                        row.append(phoneCell);
+                        row.append(addressCell);
+                        tableBody.append(row);
+                    }
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    alert("통신 실패.");
+                }
+            });
+
+            // `$.ajax({
+            //     url: apiUrl,
+            //     type: 'GET',
+            //     contentType: 'application/json',
+            //     success: function (response) {
+
+            //     },
+            //     error: function (error) {
+            //         console.log('데이터 가져오기 실패:', error);
+            //     }
+            // });
+        }
+    </script>
+</body>
+
+</html>

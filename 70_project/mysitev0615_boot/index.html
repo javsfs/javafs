@@ -12,11 +12,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
     <script src="js/clock.js"></script>
+    <script src="js/script.js"></script>
 </head>
 
 <body>
     <!-- 헤더 -->
     <header>
+        <button type="button" class="toggler">버튼</button>
         <!-- 내비게이션 -->
         <nav>
             <ul>
@@ -30,23 +32,30 @@
     <!-- 섹션1 -->
     <!-- 로고 -->
     <section id="home" class="container-fluid">
-        <div class="clock logo">
-            <span class="yy">년</span>
-            <span class="mo">월</span>
-            <span class="dd">일</span>
-            <span class="we">요일</span>
-            <span class="hh">시</span>
-            <span class="mm">분</span>
-            <span class="ss">초</span>
+        <div class="container">
+            <div class="clock logo row">
+                <div class="time col-12">
+                    <span class="yy">년</span>
+                    <span class="mo">월</span>
+                    <span class="dd">일</span>
+                </div>
+                <div class="date col-12">
+                    <span class="we">요일</span>
+                    <span class="hh">시</span>
+                    <span class="mm">분</span>
+                    <span class="ss">초</span>
+                </div>
+            </div>
         </div>
     </section>
     <!-- 섹션2 -->
-    <section id="about" class="container bg-primary">
+    <section id="about" class="container">
         <h2>ABOUT ME</h2>
         <p><em>I Love coding</em></p>
         <div class="container">
-            <div class="profile">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, amet quod! Architecto officiis
+            <div class="profile row">
+                <p class="col-12">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, amet quod!
+                    Architecto officiis
                     qui tempore tempora, aliquid provident fugiat impedit suscipit distinctio molestias iusto quod sunt
                     in dolorum, vel sequi laudantium facilis vitae! Recusandae, beatae delectus labore obcaecati
                     necessitatibus minima est non reprehenderit quia ipsum error dignissimos quis dolorem nobis aut cum
@@ -54,11 +63,12 @@
                     sapiente similique nam placeat aliquid voluptates nulla inventore maiores harum, minima qui tenetur
                     blanditiis nobis nesciunt distinctio commodi a voluptate? Placeat neque id, consectetur commodi
                     recusandae iusto. Tenetur autem corporis fugiat magni harum distinctio perspiciatis.</p>
-                <div class="photo">
+                <div class="photo col-sm-6">
                     <i class="fa-solid fa-user"></i><b>이현수</b>
                     <img src="images/Photo.jpg" alt="내사진">
                 </div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias dolores et possimus ut libero
+                <p class="col-sm-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias dolores et possimus
+                    ut libero
                     architecto tenetur! Asperiores quidem soluta odit error quibusdam omnis, in voluptates illo adipisci
                     magnam eveniet voluptatibus quasi, officiis ratione necessitatibus itaque veniam. Magni amet quod
                     distinctio iste voluptatum maxime tempore numquam. Nesciunt, totam libero inventore ullam dicta
@@ -66,54 +76,60 @@
                     ullam excepturi dicta reprehenderit, dolor perferendis laborum recusandae, aperiam, quidem omnis
                     perspiciatis mollitia sit molestiae? Quo, deserunt alias?</p>
             </div>
-            <div class="skill">
-                <h3>Im really good at:</h3>
+        </div>
+        <div id="skill" class="container">
+            <h3>Im really good at:</h3>
+            <div class="progressbar">
+                <i class="fa-brands fa-figma"></i>
+                <span class="ml-3">Planning with Figma</span>
                 <div class="progress">
-                    <div class="lst">
-                        <i class="fa-brands fa-figma"></i>
-                        <span>Planning with Figma</span>
-                        <div><span>90%</span></div>
-                    </div>
-                    <div class="lst">
-                        <i class="fa-solid fa-laptop"></i>
-                        <span>Frontend Development</span>
-                        <div><span>85%</span></div>
-                    </div>
-                    <div class="lst">
-                        <i class="fa-brands fa-java"></i>
-                        <span>Backend Development</span>
-                        <div><span>75%</span></div>
-                    </div>
-                </div><!-- //progress -->
-            </div><!-- //skill -->
+                    <div>0%</div>
+                </div>
+                <i class="fa-solid fa-laptop"></i>
+                <span class="ml-3">Frontend Development</span>
+                <div class="progress">
+                    <div>0%</div>
+                </div>
+                <i class="fa-brands fa-java"></i>
+                <span class="ml-3">Backend Development</span>
+                <div class="progress">
+                    <div>0%</div>
+                </div>
+            </div><!-- //progressbar -->
+        </div><!-- //skill -->
         </div> <!-- //.container -->
 
     </section>
-    <div id="counter" class="container-fluid">
+    <div id="counter" class="container-fluid px-0">
         <!-- .row가 display:flex; -->
-        <ul class="row">
-            <li class="col-sm-6 col-md"><span>9+</span>Planning with</li>
-            <li class="col-sm-6 col-md"><span>4+</span>Frontend Project Done</li>
-            <li class="col-sm-6 col-md"><span>3+</span>Bankend Project Done</li>
-            <li class="col-sm-6 col-md"><span>2+</span>National Technical Qualification</li>
+        <!-- text-align:center가 text-center -->
+        <ul class="row text-center m-0">
+            <li class="col-sm-6 col-md"><span></span>Planning with</li>
+            <li class="col-sm-6 col-md"><span></span>Frontend Project Done</li>
+            <li class="col-sm-6 col-md"><span></span>Bankend Project Done</li>
+            <li class="col-sm-6 col-md"><span></span>National Technical Qualification</li>
         </ul>
     </div>
     <!-- 섹션3 -->
     <!-- part2 27-4파일 4번참고 균등분배 -->
-    <section id="portfolio">
+    <section id="portfolio" class="container-fluid p-0">
         <div class="parallax"><b>PORTFOLIO</b></div>
+        <h2>MY WORK</h2>
+        <p>Here are some of my latest lorem work ipsum tipsum.<br>Click on the images to make them bigger</p>
         <div class="container">
-            <h2>MY WORK</h2>
-            <p>Here are some of my latest lorem work ipsum tipsum.<br>Click on the images to make them bigger</p>
-            <ul>
-                <li><a href="images/big1.png" data-lightbox="roadtrip"><img src="images/pj1.png" alt="포토폴리오1"></a></li>
-                <li><a href="images/big2.png" data-lightbox="roadtrip"><img src="images/pj2.png" alt="포토폴리오1"></a></li>
-                <li><a href="images/big3.png" data-lightbox="roadtrip"><img src="images/pj3.png" alt="포토폴리오1"></a></li>
-                <li><a href="images/big4.png" data-lightbox="roadtrip"><img src="images/pj4.png" alt="포토폴리오1"></a></li>
-                <li><img src="images/pf5.jpg" alt="포토폴리오5"></li>
-                <li><img src="images/pf6.jpg" alt="포토폴리오6"></li>
-                <li><img src="images/pf7.jpg" alt="포토폴리오7"></li>
-                <li><img src="images/pf8.jpg" alt="포토폴리오8"></li>
+            <ul class="row">
+                <li class="col-sm-6 col-md-3 px-sm-2 mb-sm-0"><a href="images/big1.png" data-lightbox="roadtrip"><img
+                            src="images/pj1.png" alt="포토폴리오1"></a></li>
+                <li class="col-sm-6 col-md-3 px-sm-2 mb-sm-0"><a href="images/big2.png" data-lightbox="roadtrip"><img
+                            src="images/pj2.png" alt="포토폴리오1"></a></li>
+                <li class="col-sm-6 col-md-3 px-sm-2 mb-sm-0"><a href="images/big3.png" data-lightbox="roadtrip"><img
+                            src="images/pj3.png" alt="포토폴리오1"></a></li>
+                <li class="col-sm-6 col-md-3 px-sm-2 mb-sm-0"><a href="images/big4.png" data-lightbox="roadtrip"><img
+                            src="images/pj4.png" alt="포토폴리오1"></a></li>
+                <li class="col-sm-6 col-md-3 px-sm-2 mb-sm-0"><img src="images/pf5.jpg" alt="포토폴리오5"></li>
+                <li class="col-sm-6 col-md-3 px-sm-2 mb-sm-0"><img src="images/pf6.jpg" alt="포토폴리오6"></li>
+                <li class="col-sm-6 col-md-3 px-sm-2 mb-sm-0"><img src="images/pf7.jpg" alt="포토폴리오7"></li>
+                <li class="col-sm-6 col-md-3 px-sm-2 mb-sm-0"><img src="images/pf8.jpg" alt="포토폴리오8"></li>
             </ul>
             <div class="morebtn"><button href="#" class="btn btn-outline-info">LOAD MORE</button></div>
         </div><!-- //.container -->
@@ -121,31 +137,32 @@
 
     <!-- 섹션4 -->
 
-    <section id="contact">
+    <section id="contact" class="container-fluid px-0">
         <div class="parallax"><b>CONTACT</b></div>
-
-        <h2>WHERE I WORK</h2>
-        <p>I'd love your feedback!</p>
-        <!-- 구글맵 -->
         <div class="container">
-            <div id="map"><iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3169.6232893092324!2d126.92079500000001!3d37.398740200000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b60d1eba1f981%3A0x7e2aebe0591be746!2z7JWI7JaR6rOg7Jqp67O17KeAK-yEvO2EsA!5e0!3m2!1sko!2skr!4v1682405730412!5m2!1sko!2skr"></iframe>
-            </div>
-            <div>
-                <address>
-                    <i class="fa-solid fa-location-dot"></i>경기도 안양시<br>
-                    <i class="fa-solid fa-phone"></i>Phone: +28 10-4193-4443<br>
-                    <i class="fa-solid fa-envelope"></i>Email: counman4@naver.com
-                </address>
-                <p>Swing by for a cup of<i class="fa-solid fa-mug-hot"></i>, or leave me a note:</p>
-                <form action="message.php" method="post">
-                    <input type="text" name="user_name" placeholder="이름을 입력하세요">
-                    <input type="email" name="user_email" placeholder="이메일을 입력하세요">
-                    <input type="text" name="user_message" placeholder="메세지를 간단하게 기록하세요.">
-                    <button type="submit"><i class="fa-solid fa-paper-plane"></i>SEND MESSAGE</button>
-                </form>
-            </div>
-        </div><!-- //.container -->
+            <h2>WHERE I WORK</h2>
+            <p>I'd love your feedback!</p>
+            <!-- 구글맵 -->
+            <div class="row">
+                <div id="map" class="col-sm-5"><iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3169.6232893092324!2d126.92079500000001!3d37.398740200000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b60d1eba1f981%3A0x7e2aebe0591be746!2z7JWI7JaR6rOg7Jqp67O17KeAK-yEvO2EsA!5e0!3m2!1sko!2skr!4v1682405730412!5m2!1sko!2skr"></iframe>
+                </div>
+                <div class="col-sm-6">
+                    <address>
+                        <i class="fa-solid fa-location-dot"></i>경기도 안양시<br>
+                        <i class="fa-solid fa-phone"></i>Phone: +28 10-4193-4443<br>
+                        <i class="fa-solid fa-envelope"></i>Email: counman4@naver.com
+                    </address>
+                    <p>Swing by for a cup of<i class="fa-solid fa-mug-hot"></i>, or leave me a note:</p>
+                    <form action="message.php" method="post">
+                        <input type="text" name="user_name" placeholder="이름을 입력하세요" class="mb-4">
+                        <input type="email" name="user_email" placeholder="이메일을 입력하세요">
+                        <input type="text" name="user_message" placeholder="메세지를 간단하게 기록하세요.">
+                        <button type="submit"><i class="fa-solid fa-paper-plane"></i>SEND MESSAGE</button>
+                    </form>
+                </div>
+            </div><!-- //.container -->
+        </div>
     </section>
 
     <!-- 푸터 -->

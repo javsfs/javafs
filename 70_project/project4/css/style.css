@@ -3,6 +3,7 @@
 /* @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'); */
 
 /* 초기화 */
+/* 초기화 */
 * {
     margin: 0;
     padding: 0;
@@ -13,12 +14,13 @@ html {
     font-size: 10px;
 }
 
-li {
-    list-style: none;
-}
-
 img {
     width: 100%;
+}
+
+
+li {
+    list-style: none;
 }
 
 body {
@@ -28,11 +30,7 @@ body {
 
 a {
     text-decoration: none;
-    color: #333;
-}
-
-img {
-    vertical-align: top;
+    color: #777;
 }
 
 /* 공통 */
@@ -41,6 +39,7 @@ img {
     width: 1200px;
     margin: 0 auto;
 }
+
 
 /* 헤더 */
 header {
@@ -53,6 +52,7 @@ header {
 /* 로고 */
 .logo {
     width: 200px;
+    background: lightpink;
 }
 
 /* 내비게이션 */
@@ -64,31 +64,38 @@ nav li {
     width: 150px;
     margin-left: 8px;
     text-align: center;
-    background: #672F2E;
+    background: #672f2e;
 }
 
 nav .main>li>a {
     font-size: 1.8rem;
-    color: #fff;
+    color: aliceblue;
 }
 
 nav .sub {
     display: none;
 }
 
+
+
 /* 슬라이드 */
 #slide {
+    overflow: hidden;
     height: 300px;
     background: lightcoral;
-    overflow: hidden;
 }
 
 #slide ul {
     position: relative;
     left: 0;
-    display: flex;
+    top: 0;
     width: 400%;
+    display: flex;
     animation: slide 9s infinite;
+}
+
+#slide li {
+    width: 100%;
 }
 
 @keyframes slide {
@@ -125,17 +132,17 @@ nav .sub {
     }
 }
 
-#slide img {
-    height: 300px;
-}
-
-/* 메인 콘텐츠 */
+/* 메인 컨텐츠 */
 #contents {
     display: flex;
     padding: 8px 0;
 }
 
-#contents div {
+#contents>div:not(:nth-of-type(3)) {
+    margin-right: 5px;
+}
+
+#contents>div {
     width: 400px;
     height: 200px;
 }
@@ -143,11 +150,10 @@ nav .sub {
 /* 탭 메뉴 */
 .tabs {
     padding: 24px 24px 24px 0;
-    background-clip: content-box;
 }
 
 .tabs input,
-.tabs>div {
+.tabs div {
     display: none;
 }
 
@@ -159,50 +165,49 @@ nav .sub {
 /* 탭 메뉴 - 제목/버튼 */
 .tabs label {
     display: inline-block;
+    color: #fff;
+    background: #672f2e;
     padding: 4px 16px;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
     cursor: pointer;
     font-size: 1.6rem;
-    font-weight: 500;
-    background: #EBDACA;
-    color: #111;
+    font-weight: 400;
+
 }
 
 #btn1:checked+label,
 #btn2:checked+label {
-    background: #672F2E;
-    color: #fff;
+    background: #000;
 }
 
 /* 탭 메뉴 - 공지사항 */
-#tab1 ul>li {
-    border-bottom: 1px dotted #777;
-}
-
-.tab1 {
-    display: inline-block;
+#tab1 li {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    border-bottom: 1px dotted #ccc;
 }
 
-.tab1 a {
-    display: inline-block;
-    width: 300px;
-    color: #777;
+#tab1 a {
+    width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    /* 말줄임 ...효과 */
+    text-overflow: ellipsis;
 }
 
-.tab1 a:hover {
-    color: black;
+#tab1 a:hover {
+    color: #333;
 }
 
 /* 탭 메뉴 - 갤러리 */
-#tab2 img {
-    width: 110px;
-}
-
-#tab2 {
+#tab2 ul {
     display: flex;
     justify-content: space-between;
+}
+
+#tab2 a {
+    display: inline-block;
+    width: 110px;
 }
 
 /* 배너 */
@@ -215,19 +220,21 @@ nav .sub {
     background: greenyellow;
 }
 
+
+
 /* 푸터 */
 footer {
     display: flex;
-    color: #e8e8e8;
+    color: #777;
     padding-left: 350px;
-    background: #777 url(../images/logo2.png)no-repeat 50px 50%;
+    background: #333 url(../images/logo2.png) no-repeat 30px 50%;
 }
 
 .addr {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 1200px;
+    width: 1000px;
     height: 100px;
 }
 
@@ -235,28 +242,28 @@ footer {
     display: flex;
     align-items: center;
     font-size: 3rem;
-    /* flex는 glow shrink basis */
+    /* flex: glow shrink basis */
     flex: 0 0 200px;
     height: 100px;
 }
 
-.sns a:hover {
-    transform: scale(1.2, 1.2);
-}
-
-/* .sns a{
-    color: #bababa;
+.sns a {
+    color: #555;
     margin: 0 8px;
     transition: .3s;
-} */
+}
+
 .sns a:nth-of-type(1):hover {
+    transform: scale(1.2, 1.2);
     color: #395498;
 }
 
 .sns a:nth-of-type(2):hover {
+    transform: scale(1.2, 1.2);
     color: #1c9cea;
 }
 
 .sns a:nth-of-type(3):hover {
-    color: #f06065;
+    transform: scale(1.2, 1.2);
+    color: #f60065;
 }

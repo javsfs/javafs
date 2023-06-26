@@ -33,11 +33,11 @@ a {
     color: #777;
 }
 
-.counter {
+#counter {
     color: #fff;
 }
 
-.counter span {
+#counter span {
     font-size: 2.4rem;
 }
 /* 페럴렉스 */

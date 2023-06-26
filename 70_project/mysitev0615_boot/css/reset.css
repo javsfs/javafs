@@ -20,3 +20,6 @@ iframe{
     height: 100%;
     border: none;
 }
+input{
+    width: 100%;
+}

@@ -1,201 +1,233 @@
 @charset "utf-8";
-
-@font-face {
-    font-family: GothicA1;
-    src: url(../font/GothicA1.ttf);
-}
-
-/* 공용 */
-html {
-    scroll-behavior: smooth;
-    font-size: 10px;
-}
-
-body {
-    background: #fff;
-    font-size: 1.5rem;
-    line-height: 1.8;
-    color: #333;
-}
-
-* {
-    margin: 0%;
-    padding: 0%;
-    box-sizing: border-box;
-}
-
-/* li항목 마커제거 */
-li {
-    list-style: none;
-}
-
-img {
-    width: 100%;
-    vertical-align: top;
-    margin-top: 8px;
-}
-
-.section {
-    width: 1496px;
-    margin: 0 auto;
-    padding-top: 81px;
-}
-
-h2 {
-    margin-bottom: 16px;
-    padding-bottom: 16px;
-    border-bottom: 1px solid #ccc;
-    font-size: 2.4rem;
-}
-
-h1 {
-    font-size: 3rem;
-}
-
-/* font-face사용하여 h3에 GothicA1체 적용 */
-h3 {
-    font-size: 1.8rem;
-    font-family: GothicA1;
-}
-
-a {
-    color: #333;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* 섹션2,3 flex 공용 */
-.flex {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-}
-
-.flex li:not(:nth-of-type(4n)) {
-    margin-right: 16px;
-}
-
-.flex img {
-    margin-bottom: 16px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.16);
-}
+@import url('reset.css');
+@import url('typo.css');
 
 /* 헤더 */
-/* 헤더 상단 고정 */
 header {
+    z-index: 9999;
     position: fixed;
     width: 100%;
+    padding: 12px 30px;
+    background: #fff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
-    top: 0;
-    z-index: 9999;
 }
 
-/* 네비 flex사용 */
 nav {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    align-self: center;
-    padding: 8px 16px;
-}
-
-nav ul {
-    display: flex;
-    flex-wrap: wrap;
-    align-self: center;
-}
-
-nav li {
-    width: auto;
-    padding: 8px 16px;
-}
-
-nav li:hover {
-    background-color: #ccc;
+    display: none;
 }
 
 /* 섹션1 */
-/* position사용하여 이미지 가운데 로고넣기 */
 #main {
-    padding-top: 81px;
     position: relative;
 }
 
 #main h2 {
     position: absolute;
-    transform: translate(-50%, -50%);
     left: 50%;
     top: 50%;
-    padding: 8px 8px;
-    background: rgba(255, 150, 150, 0.445);
-    color: aliceblue;
+    transform: translate(-50%, -50%);
+}
+
+#main b {
+    padding: 6px 12px 10px;
+    background: rgba(0, 0, 0, 0.75);
+}
+
+#main span {
+    display: none;
+}
+
+/* 섹션2~4 공통 */
+.section {
+    padding: 81px 30px 0;
+}
+
+.section h2 {
+    line-height: 1;
+    border-bottom: 1px solid #f1f1f1;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+.section li {
+    margin-bottom: 16px;
 }
 
 /* 섹션2 */
-/* position사용하여 이미지안에 이미지제목 넣기 */
-.po {
-    position: relative;
+#gold h2 {
+    margin-bottom: 40px;
 }
 
-.flex .po {
+#gold li {
+    position: relative;
+    border: 1px solid #f1f1f1;
+}
+
+#gold h3 {
     position: absolute;
-    padding: 8px 16px;
-    background: rgb(255, 59, 65);
-    color: rgb(255, 171, 14);
-    margin: 0, auto;
+    left: 0;
+    top: 0;
+    padding: 4px 12px;
+    background: #ff5858;
+}
+#gold li:hover{
+scale: 1.2;
 }
 
 /* 섹션3 */
-
-.flex a {
-    display: block;
-    width: 360px;
-    border: 1px solid #333;
-    text-align: center;
-    letter-spacing: 8px;
+#diamond>p {
+    margin-bottom: 40px;
 }
 
-.flex a:hover {
-    background: #c9c9c9;
+#diamond h3 {
+    margin-top: 16px;
+}
+
+#diamond li p:first-of-type {
+    margin: 8px 0;
+}
+#diamond li img:hover{
+    scale: 1.2;
+}
+#diamond a:hover{
+    background: #000000;
+    color: #ffffff;
+}
+#diamond a {
+    display: block;
+    background: #ccc;
+    text-align: center;
+    padding: 6px 0;
+    margin-top: 16px;
 }
 
 /* 섹션4 */
-input {
+#comment input {
     display: block;
-}
-
-#comment p {
-    margin-bottom: 16px;
-}
-
-input {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 16px;
+    padding: 12px;
+    margin: 15px 0;
+    border: 1px solid #ccc;
 }
 
-button {
+#comment button {
     padding: 12px 16px;
-    margin: 16px 0 54px;
-    border: none;
+    margin: 20px 0 45px;
     background: #000;
-    color: #fff;
 }
 
-button:hover {
-    background-color: #9c9c9c;
-}
-
-iframe {
-    width: 1496px;
-    height: 845px;
+#comment .map {
+    height: 185px;
 }
 
 /* 푸터 */
 footer {
-    height: 81px;
     background: #000;
-    color: #fff;
     text-align: center;
-    padding: 32px 0;
+    margin-top: 8px;
+    padding: 30px 0;
+}
+
+footer span:nth-of-type(1),
+footer span:nth-of-type(3) {
+    display: none;
+}
+
+/* 600이상 */
+@media (min-width: 600px) {
+
+    /* 헤더 */
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /* 내비게이션 */
+    nav {
+        display: block;
+    }
+
+    nav ul {
+        display: flex;
+    }
+
+    nav ul li:not(:first-of-type) {
+        margin-left: 36px;
+    }
+
+    /* 메인 타이틀 */
+    #gold .main_tit {
+        white-space: nowrap;
+    }
+
+    #gold span {
+        display: inline-block;
+        margin-left: 16px;
+        text-shadow: 1px 0px 5px #000;
+    }
+
+    /* 섹션2~4 공통 */
+    .section ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .section li {
+        width: calc(50% - 8px);
+    }
+
+    /* 섹션3 */
+    #diamond li {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    #diamond li div {
+        height: 250px;
+    }
+
+    /* 섹션4 */
+    #comment iframe {
+        height: 400px;
+    }
+}
+
+/* 992이상 */
+@media (min-width: 992px) {
+
+    /* 헤더 */
+    
+    /* 섹션1 */
+    #gold {
+        max-width: 1496px;
+        margin: 0 auto;
+    }
+
+    /* 섹션2~4 공통 */
+    .section {
+        max-width: 1496px;
+        margin: 0 auto;
+        padding: 81px 0px 0;
+    }
+
+    .section li {
+        width: calc(25% - 8px);
+    }
+
+    /* 섹션4 */
+    #comment iframe {
+        height: 845px;
+    }
+
+    /* 푸터 */
+    footer span:nth-of-type(1),
+    footer span:nth-of-type(3) {
+        display: inline-block;
+    }
+
+    footer span:nth-of-type(2) {
+        display: none;
+    }
 }

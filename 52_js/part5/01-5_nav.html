@@ -149,7 +149,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script>
         // 내비게이션바
-        $('.main > li > a').mouseenter(function (e) {
+        $('.main ').mouseenter(function (e) {
             // a태그 기본 이벤트 제거
             e.preventDefault();
             $('.sub').stop().slideDown(400);

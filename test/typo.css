@@ -1,0 +1,51 @@
+@charset "utf-8";
+
+/* reset */
+html {
+    font-size: 10px;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+/* section1 */
+h1 {
+    font-size: 2rem;
+}
+
+#section1_today_category button,
+#section1_today_category a,
+#section1_today_category i {
+    font-size: 1.5rem;
+    color: #4e4e4e;
+    font-weight: bold;
+
+}
+
+#section1_today_category button:first-of-type {
+    color: #00dc64;
+}
+
+#section1_today_category a {
+    text-decoration: none;
+}
+
+.section1_btn_wrap p {
+    font-size: 3.2rem;
+    color: #666;
+}
+
+.section1_card h2 {
+    font-size: 1.8rem;
+}
+
+.section1_card h3 {
+    font-size: 1.4rem;
+}
+
+.section1_card a {
+    text-decoration: none;
+    color: #000;
+}
+/* /section1 */

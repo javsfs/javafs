@@ -9,6 +9,222 @@
     <link rel="stylesheet" href="typo.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="script.js">
+    <style>
+        * {
+            padding: 0;
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        html {
+            font-size: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 1.5rem;
+            color: black;
+        }
+
+        body {
+            font-size: 1.6rem;
+        }
+
+        h3 {
+            font-size: 2rem;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        /* 임시 */
+        .jy_dm {
+            width: 850px;
+            height: 1520px;
+            background-color: green;
+        }
+
+        #section3 {
+            width: 1320px;
+            height: 300px;
+            background-color: yellow;
+            margin: 0 auto;
+        }
+
+        /*  */
+
+
+
+        #section2 {
+            border: 1px solid black;
+            width: 1320px;
+            height: 1520px;
+            margin: 0 auto;
+            padding: 0 64px 32px 64px;
+            background-color: blue;
+        }
+
+        .section2_wrap {
+            display: flex;
+        }
+
+        .section2_hs_wrap {
+            width: 342px;
+            height: 1520px;
+            margin: 0 0 0 24px;
+        }
+
+        /* 버튼 */
+        .section2_hs_btn_menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        /* 실시간 랭킹 */
+        .section2_hs_rankingwrap {
+            width: 342px;
+            height: 510px;
+            background-color: yellow;
+        }
+
+        .section2_hs_ranking_flex {
+            width: 342px;
+            height: 80px;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+        }
+
+        .section2_hs_ranking_flex>div:nth-of-type(1) {
+            width: 60px;
+        }
+
+        .section2_hs_ranking_flex>div:nth-of-type(2) {
+            width: 50px;
+            font-size: 2.2rem;
+            text-align: center;
+        }
+
+        /* 텍스트 자동줄넘김 X , 텍스트 가로길이보다 길어지면 ...표시 */
+        .section2_hs_ranking_flex>div:nth-of-type(3) div {
+            width: 242px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .section2_hs_rankingtext>div:nth-of-type(1):hover,
+        .section2_hs_rankingtext>div:nth-of-type(2):hover {
+            text-decoration: underline;
+        }
+
+        .section2_hs_ranking_flex div img {
+            width: 60px;
+            height: 80px;
+            background: red;
+        }
+
+        .section2_hs_ranking img:hover {
+            transform: scale(1.1);
+            transition: 0.4s;
+        }
+
+        .section2_hs_btn button {
+            border: 0;
+            outline: 0;
+            background: none;
+            content: " ";
+            clear: both;
+            cursor: pointer;
+        }
+
+
+        .section2_hs_list li {
+            display: none;
+        }
+
+        .section2_hs_list li.active {
+            display: block;
+        }
+
+        /* .section2_hs_btn button:nth-of-type(1)::after,
+        .section2_hs_btn button:nth-of-type(2)::after {
+            content: "·";
+            font-size: 3.5rem;
+            margin-left: 2px;
+        } */
+
+        .section2_hs_btn button {
+            color: #666666;
+        }
+
+        .section2_hs_btn button.active span {
+            color: black;
+        }
+
+        .section2_hs_btn button.active {
+            color: #00dc64;
+        }
+
+        /* 배너 */
+        .section2_hs_banner {
+            width: 342px;
+            height: 280px;
+            background-color: blueviolet;
+        }
+
+        .section2_hs_banner div img {
+            width: 302px;
+            height: 130px;
+            background-color: yellow;
+        }
+
+        /* 공지사항 */
+        .section2_hs_announcement {
+            width: 342px;
+            height: 208px;
+        }
+
+        .section2_hs_comment {
+            width: 342px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: aquamarine;
+        }
+
+        .section2_hs_comment_text li {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        /* 설치 */
+        .section2_hs_app {
+            width: 342px;
+            height: 192px;
+        }
+
+        .section2_hs_app_img {
+            display: flex;
+        }
+
+        .section2_hs_app_img>div:nth-of-type(1) img {
+            width: 96px;
+            height: 96px;
+            margin-right: 16px;
+            background-color: #00dc64;
+        }
+
+        .section2_hs_app_img>div:nth-of-type(2) img {
+            width: 210px;
+            height: 43px;
+            background-color: blueviolet;
+        }
+    </style>
 </head>
 
 <body>
@@ -199,6 +415,148 @@
         </div>
     </section>
     <script src="script.js"></script>
+    <section id="section2" class="section">
+        <div class="section2_wrap">
+            <div class="jy_dm">
+                <div></div>
+                <div></div>
+            </div>
+            <div class="section2_hs_wrap">
+                <!-- 랭킹조회 -->
+                <div class="section2_hs_rankingwrap">
+                    <div class="section2_hs_btn_menu">
+                        <h3>실시간 신작랭킹</h3>
+                        <div class="section2_hs_btn">
+                            <button type="button" role="tab" onclick="showContent('all')" class="active">전체</button>
+                            <button type="button" role="tab" onclick="showContent('male')"><span>·</span>남성</button>
+                            <button type="button" role="tab" onclick="showContent('female')"><span>·</span>여성</button>
+                        </div>
+                    </div>
+                    <ul class="section2_hs_list">
+                        <li class="section2_hs_ranking">
+                            <div class="section2_hs_ranking_flex">
+                                <div><a href="#"><img src="" alt=""></a></div>
+                                <div><Strong>1</Strong></div>
+                                <div class="section2_hs_rankingtext">
+                                    <div><a href="#">제목입니다.제목입니다.제목입니다.</a></div>
+                                    <div><a href="#">텍스트초과시 뒤에 ...</a></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="section2_hs_ranking">
+                            <div class="section2_hs_ranking_flex">
+                                <div><a href="#"><img src="" alt=""></a></div>
+                                <div><Strong>2</Strong></div>
+                                <div class="section2_hs_rankingtext">
+                                    <div><a href="#">11111111111111111111111.</a></div>
+                                    <div><a href="#">작가입니다.</a></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="section2_hs_ranking">
+                            <div class="section2_hs_ranking_flex">
+                                <div><a href="#"><img src="" alt=""></a></div>
+                                <div><Strong>3</Strong></div>
+                                <div class="section2_hs_rankingtext">
+                                    <div><a href="#">제목입니다.</a></div>
+                                    <div><a href="#">작가입니다.</a></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="section2_hs_ranking">
+                            <div class="section2_hs_ranking_flex">
+                                <div><a href="#"><img src="" alt=""></a></div>
+                                <div><Strong>4</Strong></div>
+                                <div class="section2_hs_rankingtext">
+                                    <div><a href="#">제목입니다.</a></div>
+                                    <div><a href="#">작가입니다.</a></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="section2_hs_ranking">
+                            <div class="section2_hs_ranking_flex">
+                                <div><a href="#"><img src="" alt=""></a></div>
+                                <div><Strong>5</Strong></div>
+                                <div class="section2_hs_rankingtext">
+                                    <div><a href="#">제목입니다.</a></div>
+                                    <div><a href="#">작가입니다.</a></div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="section2_hs_banner">
+                    <div>
+                        <a href="#"><img src="" alt=""></a>
+                        <a href="#"><img src="" alt=""></a>
+                    </div>
+                </div>
+                <!-- 공지사항 -->
+                <div class="section2_hs_announcement">
+                    <div class="section2_hs_comment">
+                        <h2>공지사항</h2>
+                        <a href="#">더보기</a>
+                    </div>
+                    <div>
+                        <ul class="section2_hs_comment_text">
+                            <li><a href="#">한줄입니다</a></li>
+                            <li><a href="#">텍스트 크기가 가로보다 길게써지면 ...으로 남길꼬야야야얌</a></li>
+                            <li><a href="#">텍스트 크기가 가로보다 길게써지면 ...으로 남길꼬야야야얌</a></li>
+                            <li><a href="#">텍스트 크기가 가로보다 길게써지면 ...으로 남길꼬야야야얌</a></li>
+                            <li><a href="#">텍스트 크기가 가로보다 길게써지면 ...으로 남길꼬야야야얌</a></li>
+                            <li><a href="#">텍스트 크기가 가로보다 길게써지면 ...으로 남길꼬야야야얌</a></li>
+                            <li><a href="#">텍스트 크기가 가로보다 길게써지면 ...으로 남길꼬야야야얌</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="section2_hs_app">
+                    <div>
+                        <h3>네이버웹툰 앱 설치 안내</h3>
+                        <p>쿠키오븐의 무료쿠키로 미리보기 회차를 열람하고<br>
+                            매일 지급되는 무료대여권으로 작품을 열람해 보세요!</p>
+                    </div>
+                    <div class="section2_hs_app_img">
+                        <div><img src="" alt=""></div>
+                        <div>
+                            <div><a href=""><img src="" alt=""></a></div>
+                            <div><a href=""><img src="" alt=""></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="section3">
+        <div><span></span></div>
+    </section>
+    <script>
+        function showContent(type) {
+            const lists = document.querySelectorAll('.section2_hs_list li');
+            const buttons = document.querySelectorAll('.section2_hs_btn button');
+            lists.forEach(item => item.classList.remove('active'));
+            buttons.forEach(btn => btn.classList.remove('active'));
+            if (type === 'all') {
+                lists.forEach(item => item.classList.add('active'));
+            } else if (type === 'male') {
+                document.querySelectorAll('.section2_hs_list li:not(.section2_hs_list li.section2_hs_list)').forEach(item => item.classList.add('active'));
+            } else if (type === 'female') {
+                document.querySelectorAll('.section2_hs_list li:not(.section2_hs_list li.section2_hs_list)').forEach(item => item.classList.add('active'));
+            }
+            console.log(type);
+            // 버튼 텍스트에 색상 변경 클래스 적용
+            buttons.forEach(btn => {
+                if (btn.getAttribute('onclick') === `showContent('${type}')`) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            showContent('all');
+        });
+    </script>
 </body>
 
 </html>

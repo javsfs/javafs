@@ -27,10 +27,13 @@
 /* 전체 넓이 */
 .section2_jjywrap {
     width: 850px;
-    height: 760px;
+    height: 700px;
 }
-.section2_jjpart1,.section2_jjpart2{
-    height: 380px;
+.section2_jjpart1{
+height: 320px;
+}
+.section2_jjpart2{
+    height: 360px;
 }
 
 
@@ -44,6 +47,7 @@
     position: relative;
     
 }
+
 .section2_mainimg li:not(:nth-of-type(5)){
     margin-right: 8px;
 }
@@ -109,6 +113,9 @@
     text-decoration: none;
     color: #000;
 }
+.section2_titdv div:nth-of-type(2){
+    padding-right: 18px;
+}
 .section2_jjy button{
     border: 0;
     outline: 0;
@@ -125,9 +132,11 @@
 .section2_btndv button:nth-child(10)::after {
     content: '';
 }
-.section2_mainimg li div:nth-of-type(2),
+.section2_mainimg li div:nth-of-type(2){
+    margin-top: 8px;
+}
 .section_jjy_tit{
-margin-top: 8px;
+margin-top: 32px;
 }
 /* 스크립트 css */
 
@@ -152,8 +161,9 @@ margin-top: 8px;
 .section2_font{
     z-index: 99999;
     position: absolute;
-    top: 65%;
-    font-size: 3rem;
+    top: 70%;
+    left: 5%;
+    font-size: 4rem;
 }
 
 /* 쭌영띠 */

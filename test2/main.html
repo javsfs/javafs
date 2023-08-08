@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="section2_jjywrap">
+            <h3>user님, 이런 웹툰의 추천은 어떠세요?</h3>
+        <div class="section2_trov">
+            <ul class="section2_mainimg">
+                <li>
+                    <div class="section2_tr"><a href="#"><img src="" alt=""></div>
+                    <div><span>제목1</span></div></a>
+                </li>
+
+                <li>
+                    <div class="section2_tr"><a href="#"><img src="" alt=""></div>
+                    <div><span>제목2</span></div></a>
+                </li>
+
+                <li>
+                    <div class="section2_tr"><a href="#"><img src="" alt=""></div>
+                    <div><span>제목3</span></div></a>
+                </li>
+
+                <li>
+                    <div class="section2_tr"><a href="#"><img src="" alt=""></div>
+                    <div><span>제목4</span></div></a>
+                </li>
+
+                <li>
+                    <div class="section2_tr"><a href="#"><img src="" alt=""></div>
+                    <div><span>제목5</span></div></a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="section2_jjy">
+            <div class="section2_titdv">
+                <div class="section2_td">
+                    <h3 class="active h3h3">가장 핫한 <strong class="h3Text">로맨스</strong>웹툰만 모아봤어요!</h3>
+                    <div class="section2_btndv">
+                        <button type="button" role="tab"  class="active romance tabButton"><span>로맨스</span></button>
+                        <button type="button" role="tab"  class="fantasy tabButton"><span>판타지</span></button>
+                        <button type="button" role="tab"  class="action tabButton"><span>액션</span></button>
+                        <button type="button" role="tab"  class="daily tabButton"><span>일상</span></button>
+                        <button type="button" role="tab"  class="thriller tabButton"><span>스릴러</span></button>
+                        <button type="button" role="tab"  class="comedy tabButton"><span>개그</span></button>
+                        <button type="button" role="tab"  class="martial-arts tabButton"><span>무협/사극</span></button>
+                        <button type="button" role="tab"  class="drama tabButton"><span>드라마</span></button>
+                        <button type="button" role="tab"  class="sentimental tabButton"><span>감성</span></button>
+                        <button type="button" role="tab"  class="sports tabButton"><span>스포츠</span></button>
+                    </div> <!-- section2_btndv -->
+                </div><!-- section2_td -->
+                    <a href="#"><span class="linkText">로맨스</span> 웹툰 더보기 <i class="fa-sharp fa-solid fa-chevron-right fa-xs foco"></i></a>
+                </div> <!-- section2_titdv -->
+
+            <div class="section2_trov">
+                <ul class="section2_mainimg section2_jj">
+
+                    <div>
+                        <li class="active"><a href="#">
+                                <div class="section2_tr"><img src="" alt=""></div>
+                            </a>
+                            <div class="section2_topa">
+                                <span class="section2_font"><strong>1</strong></span>
+                                <div class="section_jjy_tit"><a href="#">제목1</a></div>
+                            </div>
+                        </li>
+                    </div>
+
+                    <div>
+                        <li><a href="#">
+                                <div class="section2_tr"><img src="" alt=""></div>
+                            </a>
+                            <div class="section2_topa">
+                                <span class="section2_font"><strong>2</strong></span>
+                                <div class="section_jjy_tit"><a href="#">제목2</a></div>
+                            </div>
+                        </li>
+                    </div>
+
+                    <div>
+                        <li><a href="#">
+                                <div class="section2_tr"><img src="" alt=""></div>
+                            </a>
+                            <div class="section2_topa">
+                                <span class="section2_font"><strong>3</strong></span>
+                                <div class="section_jjy_tit"><a href="#">제목3</a></div>
+                            </div>
+                        </li>
+                    </div>
+
+                    <div>
+                        <li><a href="#">
+                                <div class="section2_tr"><img src="" alt=""></div>
+                            </a>
+                            <div class="section2_topa">
+                                <span class="section2_font"><strong>4</strong></span>
+                                <div class="section_jjy_tit"><a href="#">제목4</a></div>
+                            </div>
+                        </li>
+                    </div>
+
+                    <div>
+                        <li><a href="#">
+                                <div class="section2_tr"><img src="" alt=""></div>
+                            </a>
+                            <div class="section2_topa">
+                                <span class="section2_font"><strong>5</strong></span>
+                                <div class="section_jjy_tit"><a href="#">제목5</a></div>
+                            </div>
+                        </li>
+                    </div>
+                </ul> <!-- section2_maining -->
+            </div> <!-- section2_trov -->
+
+        </div> <!-- section2_jjy -->
+    </div> <!-- section2_jjywrap -->
+    <!-- <script>
+        //버튼 클릭시 버튼의 색상 변경
+const buttons = document.querySelectorAll(".section2_btndv button");
+
+document.addEventListener("DOMContentLoaded", function() {
+    buttons[0].classList.add("active");
+});
+
+for (let i = 0; i < buttons.length; i++) {
+buttons[i].onclick = function () {
+    for (let j = 0; j < buttons.length; j++) {
+        buttons[j].style.color = "#4e4e4e";
+    }
+    buttons[i].style.color = "#00dc64";
+    section1_slide.style.left = 0;
+    slide_count = 0;
+}
+};
+
+
+
+
+// 버튼 클릭 시 텍스트 변경
+const buttonstext = document.querySelectorAll(".tabButton");
+
+
+buttonstext.forEach((button) => {
+    button.addEventListener("click", () => {
+        buttonstext.forEach((btn) => {
+            btn.classList.remove("active");
+        });
+
+        button.classList.add("active");
+
+        const buttonText = button.querySelector("span").textContent;
+        const h3TextElement = document.querySelector(".section2_titdv .h3Text");
+        const linkTextElement = document.querySelector(".section2_titdv .linkText");
+
+        h3TextElement.textContent = buttonText;
+        linkTextElement.textContent = buttonText;
+    });
+});
+
+buttonstext[0].classList.add("active");
+
+    </> -->
+    <script src="sc.js"></script>
+
+</body>
+
+</html>

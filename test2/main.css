@@ -1,0 +1,125 @@
+/* 전체 넓이 */
+.section2_jjywrap {
+    width: 850px;
+    height: 760px;
+    padding-top: 7px;
+}
+
+/* 공통 */
+.section2_mainimg{
+    padding-inline-start: 0;
+    display: flex;
+    padding-bottom: 32px;
+}
+
+.section2_mainimg li{
+    list-style: none;
+    position: relative;
+    
+}
+.section2_mainimg li:not(:nth-of-type(5)){
+    padding-right: 8px;
+}
+.section2_trov ul li img{
+    width: 160px;
+    height: 210px;    
+    border-radius: 8px; 
+    display: block;
+    background: #ffc0cb;
+}
+
+.section2_mainimg a{
+    text-decoration: none;
+    color: #000;
+}
+.section2_mainimg a:hover{
+    text-decoration:underline;
+}
+
+
+
+/* 공통 트랜잭션 */
+.section2_tr{
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.section2_trov ul li img:hover{
+    transform: scale(1.1);
+    transition: 0.4s;
+    
+}
+
+/* 윗줄 */
+
+/* 밑줄 text */
+
+.section2_titdv{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.section2_td{
+    flex-direction: column;
+    align-items: flex-start;
+}
+.section2_btndv{
+    display: flex;
+}
+.foco{
+    color: #666666;
+}
+
+.section2_titdv a{
+    text-decoration: none;
+    color: #000;
+}
+.section2_jjy button{
+    border: 0;
+    outline: 0;
+    background: none;
+    cursor: pointer;
+}
+
+.section2_btndv button::after{
+    padding-left: 10px;
+    content: '·';
+    color: #000;
+    
+}
+.section2_btndv button:nth-child(10)::after {
+    content: '';
+}
+.section_jjy_tit{
+    padding-bottom: 16px;
+}
+/* 스크립트 css */
+
+.section2_jj li.active {
+    display: block;
+}
+
+.section2_btndv button {
+    color: black;
+}
+
+.section2_btndv button.active {
+    color: #00dc64;
+}
+
+/* 밑줄 imgs */
+.section2_btndv button {
+    cursor: pointer;
+}
+
+
+.section2_font{
+    z-index: 99999;
+    position: absolute;
+    top: 65%;
+    font-size: 3rem;
+}
+
+.section2_topa{
+    padding-top: 35px;
+}
